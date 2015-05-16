@@ -1,0 +1,74 @@
+#encabezado nav {
+	li {
+	}
+	a {
+	}
+}
+
+.menu-responsivo {
+	display: none;
+	height: 60px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	span {
+		background: $color-gris-3;
+		display: block;
+		height: 4px;
+		margin: 0 12px 0 auto;
+		position: relative;
+		text-indent: 48px;
+		white-space: nowrap;
+		width: 24px;
+		&:before,
+		&:after {
+			background: inherit;
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+		&:before {
+			top: -8px;
+		}
+		&:after {
+			bottom: -8px;
+		}
+	}
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
+
+@media (max-width: 767px) {
+	#encabezado nav {
+		overflow: hidden;
+		&.abierta {
+			li {
+				border-top-width: 1px;
+				height: 20px;
+			}
+		}
+		li {
+			border-top: 0 solid $color-gris-3;
+			height: 0;
+		}
+	}
+	.menu-responsivo {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	#encabezado nav {
+		li {
+			display: inline-block;
+			& + li {
+				margin-left: $columnas-calle;
+			}
+		}
+	}
+}

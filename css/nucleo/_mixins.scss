@@ -1,0 +1,35 @@
+@mixin flecha ($grosor, $lado, $color) {
+	@if length($grosor) > 1 {
+		border-color: transparent;
+		border-style: solid;
+		border-width: $grosor;
+	}
+	@else {
+		border: $grosor solid transparent;
+	}
+	border-#{$lado}-color: $color;
+	content: "";
+	height: 0;
+	position: absolute;
+	width: 0;
+}
+
+@mixin fondo ($imagen, $x: 0, $y: 0, $repetir: repeat) {
+	background: url("#{$img-url + $imagen}.png") $x $y $repetir;
+}
+
+@mixin fondo-img ($imagen) {
+	background-image: url("#{$img-url + $imagen}.png");
+}
+
+@mixin img-constante ($x, $y, $ancho, $alto) {
+	background: url("#{$img-url + $img-constante}") $x $y no-repeat;
+	height: $alto;
+	width: $ancho;
+}
+
+@mixin texto-nowrap {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

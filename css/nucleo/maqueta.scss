@@ -1,0 +1,28 @@
+#encabezado,
+main,
+#pie {
+}
+
+#encabezado {
+	position: relative;
+}
+
+main {
+}
+
+#pie {
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
+
+@media (min-width: 992px) {
+	#encabezado,
+	main,
+	#pie,
+	.columna {
+		margin-left: auto;
+		margin-right: auto;
+		width: 984px;
+	}
+}

@@ -1,0 +1,40 @@
+$redes-sociales: (
+	"facebook"		$color-facebook			10px,
+	"feed"			$color-feed				10px,
+	"google-plus"	$color-google-plus		10px,
+	"instagram"		$color-instagram		10px,
+	"linkedin"		$color-linkedin			10px,
+	"myspace"		$color-myspace			10px,
+	"pinterest"		$color-pinterest		10px,
+	"twitter"		$color-twitter			10px,
+	"vimeo"			$color-vimeo			10px,
+	"youtube"		$color-youtube			10px
+);
+
+.redes-sociales {
+	li {
+		height: 0px;
+		width: 0px;
+		@each $red-social in $redes-sociales {
+			&.#{nth($red-social, 1)} {
+				background: nth($red-social, 2);
+				&:hover {
+					background: lighten(nth($red-social, 2), 10%);
+				}
+				svg {
+					width: nth($red-social, 3);
+				}
+			}
+		}
+	}
+	a {
+		display: block;
+		height: 100%;
+		line-height: 40px;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	svg {
+		fill: #FFFFFF;
+	}
+}

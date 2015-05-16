@@ -1,0 +1,1 @@
+sass --watch beta.scss:estilos.css

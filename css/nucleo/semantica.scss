@@ -1,0 +1,146 @@
+h1, h2, h3, h4, h5, h6,
+dt,
+legend {
+	color: $color-encabezado;
+	font-family: $tipografia-encabezado, $tipografia-encabezado-backup;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		font-family: inherit;
+	}
+}
+
+body,
+p, small, address, time, abbr, blockquote, q, cite, a,
+div, li, dd,
+label, input, select, option, textarea, button,
+th, td {
+	font-family: $tipografia-texto, $tipografia-texto-backup;
+	font-size: 13px;
+}
+
+body,
+p, small, address, time, abbr, blockquote, q, cite, a,
+img,
+li, dd,
+label, textarea,
+th, td {
+	line-height: $interlineado;
+}
+
+body,
+p, small, address, time, abbr, blockquote, q, cite,
+li, dd,
+label,
+th, td {
+	color: $color-texto;
+}
+
+p, small,
+li, dd {
+	a {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}
+
+p {
+	small {
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}
+
+a,
+svg,
+div, li, dd,
+label, input, select, option, textarea, button,
+td {
+	transition: all $trs;
+}
+
+figure,
+div, ol, ul, dl,
+form, fieldset,
+tr,
+iframe {
+	line-height: 0;
+}
+
+::selection {
+	background: $color-gris-3;
+	color: $color-blanco;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 30px;
+	& + h2 {
+		margin-top: 0px;
+	}
+	& + p {
+		margin-top: 0px;
+	}
+}
+
+h2 {
+	font-size: 12px;
+	line-height: 12px;
+	& + h3 {
+		margin-top: 0px;
+	}
+	& + p,
+	& + ol,
+	& + ul,
+	& + dl {
+		margin-top: 0px;
+	}
+	p + &,
+	ol + &,
+	ul + &,
+	dl + & {
+		margin-top: 0px;
+	}
+}
+
+h3 {
+	font-size: 0px;
+	line-height: 0px;
+	& + p,
+	& + ol,
+	& + ul,
+	& + dl {
+		margin-top: 0px;
+	}
+	p + &,
+	ol + &,
+	ul + &,
+	dl + & {
+		margin-top: 0px;
+	}
+}
+
+p {
+	& + p,
+	& + ol,
+	& + ul,
+	& + dl,
+	& + form {
+		margin-top: 0px;
+	}
+	ol + &,
+	ul + &,
+	dl + & {
+		margin-top: 0px;
+	}
+}
+
+a {
+	color: $color-gris-4;
+	&:hover {
+	}
+}

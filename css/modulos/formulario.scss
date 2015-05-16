@@ -1,0 +1,132 @@
+fieldset {
+}
+
+legend {
+}
+
+label {
+	display: block;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+select,
+option,
+textarea,
+.campo {
+	background: $color-blanco;
+	border: 1px solid $color-gris-E;
+	box-sizing: border-box;
+	color: $color-gris-0;
+	height: 0px;
+	line-height: 0px;
+	padding: 0 0px;
+	width: 100%;
+	&:focus {
+		background: $color-gris-0;
+		color: $color-blanco;
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+}
+
+select {
+	padding-right: 0;
+}
+
+option {
+	border: 0;
+}
+
+textarea {
+	height: 0px;
+	resize: vertical;
+}
+
+button,
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+}
+
+button {
+}
+
+input[type="reset"] {
+}
+
+input[type="submit"] {
+}
+
+form {
+	div {
+		& + div {
+			margin-top: 0;
+		}
+	}
+	small {
+	}
+	[disabled] {
+	}
+}
+
+.input-file {
+	position: relative;
+	label {
+		cursor: pointer;
+		padding-bottom: 0px;
+		position: relative;
+		z-index: 11;
+	}
+	.campo {
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		padding-right: 0px;
+		position: absolute;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		z-index: 1;
+		&:before {
+			background: $color-gris-E;
+			content: "Subir archivo...";
+			padding: 0 0px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		&:after {
+			content: attr(data-archivo);
+			color: $color-gris-0;
+		}
+	}
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Fixes
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+::-webkit-input-placeholder {
+	color: $color-gris-0;
+}
+
+::-moz-placeholder {
+	color: $color-gris-0;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: $color-gris-0;
+}

@@ -1,0 +1,40 @@
+$tipografia-online: 1;
+
+$tipografia-encabezado: "Open Sans";
+$tipografia-texto: "Open Sans";
+$tipografia-encabezado-backup: sans-serif;
+$tipografia-texto-backup: sans-serif;
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Si la tipografía no es online...
+
+$tipografia-encabezado-local: "OpenSans";
+$tipografia-encabezado-local-style: italic;
+$tipografia-encabezado-local-variable: "SemiBold";
+$tipografia-encabezado-local-weight: 300;
+
+$tipografia-texto-local: "OpenSans";
+$tipografia-texto-local-style: italic;
+$tipografia-texto-local-variable: "SemiBold";
+$tipografia-texto-local-weight: 300;
+
+@if $tipografia-online != 1 {
+	@for $i from 1 through length($tipografia-encabezado-local-weight) {
+		@font-face {
+			font-family: $tipografia-encabezado;
+			font-style: nth($tipografia-encabezado-local-style, $i);
+			font-weight: nth($tipografia-encabezado-local-weight, $i);
+			src: url("../fuentes/#{$tipografia-encabezado-local + "-" + nth($tipografia-encabezado-local-variable, $i)}.ttf");
+		}
+	}
+	@if $tipografia-encabezado != $tipografia-texto {
+		@for $i from 1 through length($tipografia-texto-local-weight) {
+			@font-face {
+				font-family: $tipografia-texto;
+				font-style: nth($tipografia-texto-local-style, $i);
+				font-weight: nth($tipografia-texto-local-weight, $i);
+				src: url("../fuentes/#{$tipografia-texto-local + "-" + nth($tipografia-texto-local-variable, $i)}.ttf");
+			}
+		}
+	}
+}

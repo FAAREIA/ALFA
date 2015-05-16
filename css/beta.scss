@@ -1,0 +1,39 @@
+@import "nucleo/funciones",
+		"nucleo/variables",
+		"nucleo/mixins",
+		"nucleo/colores",
+		"nucleo/tipografias",
+		"nucleo/reset",
+		"nucleo/grilla",
+		"nucleo/maqueta",
+		"nucleo/semantica";
+
+
+@import "bibliotecas/colorbox",
+		"bibliotecas/cycle2";
+
+
+@import "modulos/boton",
+		"modulos/formulario",
+		"modulos/impresion",
+		"modulos/isologotipo",
+		"modulos/legales",
+		"modulos/lista",
+		"modulos/mensaje",
+		"modulos/nav",
+		"modulos/publicidades",
+		"modulos/redes-sociales",
+		"modulos/solo-lectura",
+		"modulos/svg",
+		"modulos/tabla",
+		"modulos/video";
+
+
+// @import "pantallas/.scss",
+// 		"pantallas/.scss",
+// 		"pantallas/home/.scss",
+// 		"pantallas/novedad/.scss",
+// 		"pantallas/novedades/.scss";
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ajustes de máxima urgencia...

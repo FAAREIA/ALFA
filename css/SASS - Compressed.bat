@@ -1,0 +1,1 @@
+sass --style compressed beta.scss:estilos.css

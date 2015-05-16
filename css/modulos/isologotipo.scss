@@ -1,0 +1,13 @@
+#encabezado h1 {
+	height: 0px;
+	width: 0px;
+	a {
+		display: block;
+		height: inherit;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	svg {
+		width: 100%;
+	}
+}

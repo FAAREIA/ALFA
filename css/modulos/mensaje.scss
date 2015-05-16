@@ -1,0 +1,60 @@
+.mensaje {
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 0 0px $color-gris-0;
+	box-sizing: border-box;
+	padding: 0px 0px;
+	position: relative;
+	&.fixed {
+		left: 50%;
+		position: fixed;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 300px;
+		z-index: 933;
+	}
+	&.alerta {
+		background: #FFF4C3;
+		border-color: #F9E488;
+		color: #CA910A;
+		fill: #CA910A;
+	}
+	&.error {
+		background: #FFD7D0;
+		border-color: #FFB1A3;
+		color: #E93D30;
+		fill: #E93D30;
+	}
+	&.satisfactorio {
+		background: #DDFFEF;
+		border-color: #B9DDCC;
+		color: #18A964;
+		fill: #18A964;
+	}
+	p,
+	small,
+	li,
+	a {
+		color: inherit;
+	}
+	.cerrar {
+		box-sizing: content-box;
+		fill: $color-gris-4;
+		height: 10px;
+		line-height: 40px;
+		opacity: 0.5;
+		overflow: hidden;
+		padding: 7px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 10px;
+		&:hover {
+			fill: inherit;
+			opacity: 1;
+		}
+		svg {
+			width: 100%;
+		}
+	}
+}

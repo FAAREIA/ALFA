@@ -1,0 +1,11 @@
+svg {
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	overflow: visible;
+	&.inline {
+		display: inline-block;
+		margin: 0;
+		vertical-align: middle;
+	}
+}

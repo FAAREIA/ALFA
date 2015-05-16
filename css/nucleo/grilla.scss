@@ -1,0 +1,42 @@
+$columnas: 12;
+$columnas-calle: 24px;
+$interlineado: 20px;
+
+$media-queries: ("xxs": 320px, "xs": 480px, "s": 640px, "m": 768px, "l": 992px, "xl": 1200px);
+
+@each $media-query-nombre, $media-query-ancho in ($media-queries) {
+	@media (min-width: $media-query-ancho) {
+		@for $i from 1 through $columnas {
+			.col-#{$media-query-nombre + "-" + $i} {
+				width: 100% / ($columnas / $i);
+			}
+			.col-#{$media-query-nombre + "-empuje-" + $i} {
+				left: 100% / ($columnas / $i);
+			}
+			.col-#{$media-query-nombre + "-tire-" + $i} {
+				left: 0 - (100% / ($columnas / $i));
+			}
+		}
+		.col-#{$media-query-nombre}-empuje-0,
+		.col-#{$media-query-nombre}-tire-0 {
+			left: auto;
+		}
+	}
+}
+
+.columnas {
+	margin-left: 0 - ($columnas-calle / 2);
+	margin-right: 0 - ($columnas-calle / 2);
+}
+
+[class*="col-"] {
+	box-sizing: border-box;
+	display: inline-block;
+	padding-left: $columnas-calle / 2;
+	padding-right: $columnas-calle / 2;
+}
+
+[class*="-empuje-"],
+[class*="-tire-"] {
+	position: relative;
+}
