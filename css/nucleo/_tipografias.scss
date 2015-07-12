@@ -1,24 +1,22 @@
-$tipografia-online: 1;
-
-$tipografia-encabezado: "Open Sans";
-$tipografia-texto: "Open Sans";
-$tipografia-encabezado-backup: sans-serif;
-$tipografia-texto-backup: sans-serif;
+$tipografia-encabezado					:	"Open Sans";
+$tipografia-encabezado-backup			:	sans-serif;
+$tipografia-texto						:	"Open Sans";
+$tipografia-texto-backup				:	sans-serif;
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Si la tipografía no es online...
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Si la tipografía se carga localmente...
 
-$tipografia-encabezado-local: "OpenSans";
-$tipografia-encabezado-local-style: italic;
-$tipografia-encabezado-local-variable: "SemiBold";
-$tipografia-encabezado-local-weight: 300;
+$tipografia-encabezado-local			:	null;
+$tipografia-encabezado-local-style		:	null;
+$tipografia-encabezado-local-variable	:	null;
+$tipografia-encabezado-local-weight		:	null;
 
-$tipografia-texto-local: "OpenSans";
-$tipografia-texto-local-style: italic;
-$tipografia-texto-local-variable: "SemiBold";
-$tipografia-texto-local-weight: 300;
+$tipografia-texto-local					:	"OpenSans";
+$tipografia-texto-local-style			:	italic,			normal,		normal;
+$tipografia-texto-local-variable		:	"LightItalic",	"Regular",	"Bold";
+$tipografia-texto-local-weight			:	300,			400,		700;
 
-@if $tipografia-online != 1 {
+@if $tipografia-encabezado-local != null {
 	@for $i from 1 through length($tipografia-encabezado-local-weight) {
 		@font-face {
 			font-family: $tipografia-encabezado;

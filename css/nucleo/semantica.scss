@@ -1,58 +1,39 @@
 h1, h2, h3, h4, h5, h6,
 dt,
-legend {
+legend,
+th {
 	color: $color-encabezado;
 	font-family: $tipografia-encabezado, $tipografia-encabezado-backup;
+	font-weight: 700;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	a {
-		font-family: inherit;
+		color: inherit;
+		&:hover {
+		}
 	}
-}
-
-body,
-p, small, address, time, abbr, blockquote, q, cite, a,
-div, li, dd,
-label, input, select, option, textarea, button,
-th, td {
-	font-family: $tipografia-texto, $tipografia-texto-backup;
-	font-size: 13px;
-}
-
-body,
-p, small, address, time, abbr, blockquote, q, cite, a,
-img,
-li, dd,
-label, textarea,
-th, td {
-	line-height: $interlineado;
 }
 
 body,
 p, small, address, time, abbr, blockquote, q, cite,
 li, dd,
 label,
-th, td {
+td {
 	color: $color-texto;
+	font-family: $tipografia-texto, $tipografia-texto-backup;
+	font-size: 13px;
+	line-height: $interlineado;
 }
 
-p, small,
-li, dd {
-	a {
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-	}
+input, select, option, textarea, button {
+	font-family: $tipografia-texto, $tipografia-texto-backup;
+	font-size: 13px;
 }
 
-p {
-	small {
-		color: inherit;
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-	}
+img,
+textarea {
+	line-height: $interlineado;
 }
 
 a,
@@ -63,6 +44,7 @@ td {
 	transition: all $trs;
 }
 
+header, footer, section, article, aside, nav,
 figure,
 div, ol, ul, dl,
 form, fieldset,
@@ -82,14 +64,17 @@ h1 {
 	& + h2 {
 		margin-top: 0px;
 	}
-	& + p {
+	& + p,
+	& + ol,
+	& + ul,
+	& + dl {
 		margin-top: 0px;
 	}
 }
 
 h2 {
-	font-size: 12px;
-	line-height: 12px;
+	font-size: 18px;
+	line-height: 18px;
 	& + h3 {
 		margin-top: 0px;
 	}
@@ -108,8 +93,8 @@ h2 {
 }
 
 h3 {
-	font-size: 0px;
-	line-height: 0px;
+	font-size: 13px;
+	line-height: 13px;
 	& + p,
 	& + ol,
 	& + ul,
@@ -122,6 +107,9 @@ h3 {
 	dl + & {
 		margin-top: 0px;
 	}
+}
+
+h4 {
 }
 
 p {
@@ -137,10 +125,20 @@ p {
 	dl + & {
 		margin-top: 0px;
 	}
+	small {
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
 }
 
 a {
-	color: $color-gris-4;
+	color: $color-gris-0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
 	&:hover {
 	}
 }

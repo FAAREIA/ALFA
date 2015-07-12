@@ -1,19 +1,21 @@
+/*! ALFA v1.0.0 */
+
 @import "nucleo/funciones",
 		"nucleo/variables",
 		"nucleo/mixins",
+		"nucleo/grilla",
 		"nucleo/colores",
 		"nucleo/tipografias",
 		"nucleo/reset",
-		"nucleo/grilla",
 		"nucleo/maqueta",
 		"nucleo/semantica";
 
 
-// @import "bibliotecas/colorbox",
-// 		"bibliotecas/cycle2";
+// @import "bibliotecas/.scss";
 
 
 @import "modulos/boton",
+		"modulos/emergente",
 		"modulos/formulario",
 		"modulos/impresion",
 		"modulos/isologotipo",
@@ -21,19 +23,17 @@
 		"modulos/lista",
 		"modulos/mensaje",
 		"modulos/nav",
-		"modulos/publicidades",
+		"modulos/paginado",
+		"modulos/publicidad",
 		"modulos/redes-sociales",
+		"modulos/slideshow",
 		"modulos/solo-lectura",
 		"modulos/svg",
 		"modulos/tabla",
 		"modulos/video";
 
 
-// @import "pantallas/.scss",
-// 		"pantallas/.scss",
-// 		"pantallas/home/.scss",
-// 		"pantallas/novedad/.scss",
-// 		"pantallas/novedades/.scss";
+// @import "pantallas/.scss";
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ajustes de máxima urgencia...

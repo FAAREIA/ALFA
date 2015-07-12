@@ -15,6 +15,9 @@ $redes-sociales: (
 	li {
 		height: 0px;
 		width: 0px;
+		& + li {
+			margin-left: 0px;
+		}
 		@each $red-social in $redes-sociales {
 			&.#{nth($red-social, 1)} {
 				background: nth($red-social, 2);
@@ -29,12 +32,10 @@ $redes-sociales: (
 	}
 	a {
 		display: block;
-		height: 100%;
-		line-height: 40px;
+		height: inherit;
 		overflow: hidden;
-		white-space: nowrap;
 	}
 	svg {
-		fill: #FFFFFF;
+		fill: $color-blanco;
 	}
 }

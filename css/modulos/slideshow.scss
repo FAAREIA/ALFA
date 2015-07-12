@@ -1,0 +1,38 @@
+.slideshow {
+	position: relative;
+	.slides {
+		li {
+		}
+	}
+	.paginado {
+	}
+	.anterior,
+	.siguiente {
+		box-sizing: border-box;
+		fill: $color-gris-0;
+		height: 100%;
+		overflow: hidden;
+		padding: 0 0px;
+		position: absolute;
+		top: 0;
+		width: 72px;
+		z-index: 311;
+		&:hover {
+			fill: $color-gris-0;
+			padding: 0 0px;
+		}
+		svg {
+			margin: 0;
+			width: 0px;
+		}
+	}
+	.anterior {
+		left: 0;
+	}
+	.siguiente {
+		right: 0;
+		svg {
+			margin-left: auto;
+		}
+	}
+}

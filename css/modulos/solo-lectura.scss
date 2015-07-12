@@ -1,10 +1,7 @@
 .solo-lectura {
 	height: 0;
 	left: -125%;
+	overflow: hidden;
 	position: absolute;
 	width: 0;
-	form & {
-		left: auto;
-		visibility: hidden;
-	}
 }

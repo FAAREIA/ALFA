@@ -1,11 +1,10 @@
-$bdrs: 0px;
-$trs: 0.2s;
-$img-url-sistema: (
-	"Drupal 7.x": "/sites/default/archivos/_nucleo/",
-	"Drupal 8.x": "",
-	"HTML": "/img/",
-	"Wordpress": "/wp-content/uploads/"
+$bdrs				:	0px;
+$trs				:	0.2s;
+
+$img-url			:	(
+	"Drupal 7.x"	:	"/sites/default/archivos/_nucleo/",
+	"Drupal 8.x"	:	"",
+	"HTML"			:	"../img/",
+	"Wordpress"		:	"/wp-content/uploads/"
 );
-$img-url: map-get($img-url-sistema, "Drupal 7.x");
-$img-constante-version: 0.1;
-$img-constante: "constante.png?v=" + $img-constante-version;
+$img-url			:	map-get($img-url, "Drupal 7.x");

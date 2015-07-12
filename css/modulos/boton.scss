@@ -1,2 +1,17 @@
 .boton {
 }
+
+.cerrar {
+	box-sizing: content-box;
+	height: 10px;
+	line-height: 40px;
+	overflow: hidden;
+	padding: 7px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 10px;
+	svg {
+		width: 100%;
+	}
+}

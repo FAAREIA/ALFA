@@ -1,8 +1,3 @@
-#encabezado,
-main,
-#pie {
-}
-
 #encabezado {
 	position: relative;
 }
@@ -13,16 +8,64 @@ main {
 #pie {
 }
 
+.columna {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: ($columnas * $columnas-ancho) + (($columnas - 1) * $columnas-calle);
+}
+
+.columnas {
+	margin-left: 0 - ($columnas-calle / 2);
+	margin-right: 0 - ($columnas-calle / 2);
+	[class*="col-"] {
+		padding-left: $columnas-calle / 2;
+		padding-right: $columnas-calle / 2;
+	}
+}
+
+[class*="col-"] {
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+[class*="-empuje-"],
+[class*="-tire-"] {
+	position: relative;
+}
+
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
 
-@media (min-width: 992px) {
-	#encabezado,
-	main,
-	#pie,
+@each $media-query-nombre, $media-query-ancho in ($media-queries) {
+	@media (min-width: $media-query-ancho) {
+		@for $i from 1 through $columnas {
+			.col-#{$media-query-nombre + "-" + $i} {
+				width: 100% / ($columnas / $i);
+			}
+			.col-#{$media-query-nombre + "-empuje-" + $i} {
+				left: 100% / ($columnas / $i);
+			}
+			.col-#{$media-query-nombre + "-tire-" + $i} {
+				left: 0 - (100% / ($columnas / $i));
+			}
+		}
+		.col-#{$media-query-nombre}-empuje-0,
+		.col-#{$media-query-nombre}-tire-0 {
+			left: auto;
+		}
+	}
+}
+
+@media (max-width: 639px) {
 	.columna {
-		margin-left: auto;
-		margin-right: auto;
-		width: 984px;
+		padding-left: floor($columnas-calle / 4);
+		padding-right: floor($columnas-calle / 4);
+	}
+}
+
+@media (min-width: 640px) and (max-width: 991px) {
+	.columna {
+		padding-left: $columnas-calle / 2;
+		padding-right: $columnas-calle / 2;
 	}
 }

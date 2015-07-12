@@ -1,16 +1,17 @@
 .mensaje {
 	border-style: solid;
 	border-width: 1px;
-	box-shadow: 0 0 0px $color-gris-0;
 	box-sizing: border-box;
 	padding: 0px 0px;
 	position: relative;
+	transition: none;
 	&.fixed {
+		box-shadow: 0 0 6px $color-gris-0;
 		left: 50%;
 		position: fixed;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: 300px;
+		width: 308px;
 		z-index: 933;
 	}
 	&.alerta {
@@ -33,28 +34,18 @@
 	}
 	p,
 	small,
+	a,
 	li,
-	a {
+	dt,
+	dd {
 		color: inherit;
 	}
 	.cerrar {
-		box-sizing: content-box;
 		fill: $color-gris-4;
-		height: 10px;
-		line-height: 40px;
 		opacity: 0.5;
-		overflow: hidden;
-		padding: 7px;
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 10px;
 		&:hover {
 			fill: inherit;
 			opacity: 1;
-		}
-		svg {
-			width: 100%;
 		}
 	}
 }
