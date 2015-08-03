@@ -9,16 +9,16 @@
 	.anterior,
 	.siguiente {
 		box-sizing: border-box;
-		fill: color("gris-0");
+		fill: $color-gris-0;
 		height: 100%;
 		overflow: hidden;
 		padding: 0 0px;
 		position: absolute;
 		top: 0;
 		width: 72px;
-		z-index: z("contenido");
+		z-index: 311;
 		&:hover {
-			fill: color("gris-0");
+			fill: $color-gris-0;
 			padding: 0 0px;
 		}
 		svg {

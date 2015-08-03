@@ -1,36 +1,34 @@
-$colores			:	(
-	"negro"			:	#000000,
-	"gris-0"		:	#000000,
-	"gris-1"		:	#111111,
-	"gris-2"		:	#222222,
-	"gris-3"		:	#333333,
-	"gris-4"		:	#444444,
-	"gris-5"		:	#555555,
-	"gris-6"		:	#666666,
-	"gris-7"		:	#777777,
-	"gris-8"		:	#888888,
-	"gris-9"		:	#999999,
-	"gris-A"		:	#AAAAAA,
-	"gris-B"		:	#BBBBBB,
-	"gris-C"		:	#CCCCCC,
-	"gris-D"		:	#DDDDDD,
-	"gris-E"		:	#EEEEEE,
-	"gris-F"		:	#FFFFFF,
-	"blanco"		:	#FFFFFF,
+$color-negro		:		#000000;
+$color-gris-0		:		#000000;
+$color-gris-1		:		#111111;
+$color-gris-2		:		#222222;
+$color-gris-3		:		#333333;
+$color-gris-4		:		#444444;
+$color-gris-5		:		#555555;
+$color-gris-6		:		#666666;
+$color-gris-7		:		#777777;
+$color-gris-8		:		#888888;
+$color-gris-9		:		#999999;
+$color-gris-A		:		#AAAAAA;
+$color-gris-B		:		#BBBBBB;
+$color-gris-C		:		#CCCCCC;
+$color-gris-D		:		#DDDDDD;
+$color-gris-E		:		#EEEEEE;
+$color-gris-F		:		#FFFFFF;
+$color-blanco		:		#FFFFFF;
 
-	"encabezado"	:	#333333,
-	"texto"			:	#333333,
+$color-encabezado	:		$color-gris-3;
+$color-texto		:		$color-gris-3;
 
-	"android"		:	#A4C439,
-	"apple"			:	#666666,
-	"facebook"		:	#3B5998,
-	"feed"			:	#FF8226,
-	"google-plus"	:	#DD4B39,
-	"instagram"		:	#3F729B,
-	"linkedin"		:	#0075B2,
-	"myspace"		:	#008DDE,
-	"pinterest"		:	#CB2028,
-	"twitter"		:	#00B0ED,
-	"vimeo"			:	#1AB7EA,
-	"youtube"		:	#E52D27
-);
+$color-android		:		#A4C439;
+$color-apple		:		#666666;
+$color-facebook		:		#3B5998;
+$color-feed			:		#FF8226;
+$color-google-plus	:		#DD4B39;
+$color-instagram	:		#3F729B;
+$color-linkedin		:		#0075B2;
+$color-myspace		:		#008DDE;
+$color-pinterest	:		#CB2028;
+$color-twitter		:		#00B0ED;
+$color-vimeo		:		#1AB7EA;
+$color-youtube		:		#E52D27;

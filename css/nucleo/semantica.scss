@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6,
 dt,
 legend,
 th {
-	color: color("encabezado");
+	color: $color-encabezado;
 	font-family: $tipografia-encabezado, $tipografia-encabezado-backup;
 	font-weight: 700;
 }
@@ -20,10 +20,10 @@ p, small, address, time, abbr, blockquote, q, cite,
 li, dd,
 label,
 td {
-	color: color("texto");
+	color: $color-texto;
 	font-family: $tipografia-texto, $tipografia-texto-backup;
 	font-size: 13px;
-	line-height: map-get($grilla, "interlineado");
+	line-height: $interlineado;
 }
 
 input, select, option, textarea, button {
@@ -33,7 +33,7 @@ input, select, option, textarea, button {
 
 img,
 textarea {
-	line-height: map-get($grilla, "interlineado");
+	line-height: $interlineado;
 }
 
 a,
@@ -54,8 +54,8 @@ iframe {
 }
 
 ::selection {
-	background: color("gris-3");
-	color: color("blanco");
+	background: $color-gris-3;
+	color: $color-blanco;
 }
 
 h1 {
@@ -134,7 +134,7 @@ p {
 }
 
 a {
-	color: color("gris-0");
+	color: $color-gris-0;
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;

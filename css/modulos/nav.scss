@@ -14,7 +14,7 @@
 	top: 0px;
 	width: 100%;
 	span {
-		background: color("gris-0");
+		background: $color-gris-0;
 		display: block;
 		height: 4px;
 		margin: 0 0 0 auto;
@@ -53,7 +53,7 @@
 			}
 		}
 		li {
-			border-top: 0 solid color("gris-0");
+			border-top: 0 solid $color-gris-0;
 			height: 0;
 		}
 	}

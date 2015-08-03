@@ -1,39 +1,13 @@
-$grilla						:	(
-	"columnas"				:	12 null,
-	"ancho"					:	60px,
-	"calle"					:	24px,
-	"interlineado"			:	20px
-);
+$columnas		:	12;
+$columnas-ancho	:	60px;
+$columnas-calle	:	24px;
+$interlineado	:	20px;
 
-$media-queries				:	(
-	"xxs"					:	(
-		"ancho-minimo"		:	320px,
-		"columnas"			:	4,
-		"calle"				:	map-get($grilla, "calle") / 2
-	),
-	"xs"					:	(
-		"ancho-minimo"		:	480px,
-		"columnas"			:	4,
-		"calle"				:	null
-	),
-	"s"						:	(
-		"ancho-minimo"		:	640px,
-		"columnas"			:	8,
-		"calle"				:	null
-	),
-	"m"						:	(
-		"ancho-minimo"		:	768px,
-		"columnas"			:	8,
-		"calle"				:	map-get($grilla, "calle")
-	),
-	"l"						:	(
-		"ancho-minimo"		:	992px,
-		"columnas"			:	map-get($grilla, "columnas"),
-		"calle"				:	null
-	),
-	"xl"					:	(
-		"ancho-minimo"		:	1200px,
-		"columnas"			:	map-get($grilla, "columnas"),
-		"calle"				:	null
-	)
+$media-queries	:	(
+	"xxs"		:	320px,
+	"xs"		:	480px,
+	"s"			:	640px,
+	"m"			:	768px,
+	"l"			:	992px,
+	"xl"		:	1200px
 );
