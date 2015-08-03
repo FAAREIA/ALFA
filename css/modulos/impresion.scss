@@ -1,7 +1,7 @@
 @media print {
 	* {
 		box-shadow: none !important;
-		color: $color-negro !important;
+		color: color("negro") !important;
 		text-shadow: none !important;
 	}
 	body {

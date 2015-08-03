@@ -1,10 +1,10 @@
 $bdrs				:	0px;
+$img-url			:	"../img/";
 $trs				:	0.2s;
-
-$img-url			:	(
-	"Drupal 7.x"	:	"/sites/default/archivos/_nucleo/",
-	"Drupal 8.x"	:	"",
-	"HTML"			:	"../img/",
-	"Wordpress"		:	"/wp-content/uploads/"
+$z-index			:	(
+	"contenido"		:	111,
+	"desplegable"	:	211,
+	"emergente"		:	311,
+	"mensaje"		:	411,
+	"publicidad"	:	511
 );
-$img-url			:	map-get($img-url, "Drupal 7.x");

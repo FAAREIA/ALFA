@@ -1,0 +1,19 @@
+@function ancho($columnas) {
+	@return ((map-get($grilla, "ancho") + map-get($grilla, "calle")) * $columnas) - map-get($grilla, "calle");
+}
+
+@function color($color) {
+	@if map-has-key($colores, $color) {
+		@return map-get($colores, $color);
+	}
+	@warn "Color '#{$color}' indefinido.";
+	@return null;
+}
+
+@function z($index) {
+	@if map-has-key($z-index, $index) {
+		@return map-get($z-index, $index);
+	}
+	@warn "z-index '#{$index}' indefinido.";
+	@return null;
+}
