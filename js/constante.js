@@ -1,21 +1,24 @@
 $(document).ready(function() {
+	// Iniciamos la biblioteca
+	svg4everybody();
+
 	// Menú responsivo
 	$('.menu-responsivo').on('click', function() {
 		$('#encabezado nav').toggleClass('abierta');
 	});
 
-	// Cerrar mensajes
+	// Mensajes
 	$('.mensaje .cerrar').on('click', function() {
 		$(this).closest('.mensaje').fadeOut(240);
 	});
 
-	// Abrir emergentes
+	// Emergentes
+	// Abrir
 	$('button[data-emergente]').on('click', function() {
 		var emergente = $(this).attr('data-emergente');
 		$('.emergente[data-emergente="' + emergente + '"]').fadeIn(480);
 	});
-
-	// Cerrar emergentes
+	// Cerrar
 	$('.emergente').on('click', function(e) {
 		var tag = $(e.target);
 		if (tag.is(this) || tag.is('.cerrar')) {

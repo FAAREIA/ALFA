@@ -20,9 +20,9 @@ $redes-sociales		:	(
 		}
 		@each $red-social, $ancho in $redes-sociales {
 			&.#{$red-social} {
-				background: color($red-social);
+				background: c($red-social);
 				&:hover {
-					background: lighten(color($red-social), 10%);
+					background: lighten(c($red-social), 10%);
 				}
 				svg {
 					width: $ancho;
@@ -36,6 +36,6 @@ $redes-sociales		:	(
 		overflow: hidden;
 	}
 	svg {
-		fill: color("blanco");
+		fill: c("blanco");
 	}
 }

@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6,
 dt,
 legend,
 th {
-	color: color("encabezado");
+	color: c("encabezado");
 	font-family: $tipografia-encabezado, $tipografia-encabezado-backup;
 	font-weight: 700;
 }
@@ -20,7 +20,7 @@ p, small, address, time, abbr, blockquote, q, cite,
 li, dd,
 label,
 td {
-	color: color("texto");
+	color: c("texto");
 	font-family: $tipografia-texto, $tipografia-texto-backup;
 	font-size: 13px;
 	line-height: map-get($grilla, "interlineado");
@@ -54,8 +54,8 @@ iframe {
 }
 
 ::selection {
-	background: color("gris-3");
-	color: color("blanco");
+	background: c("gris-3");
+	color: c("blanco");
 }
 
 h1 {
@@ -134,7 +134,7 @@ p {
 }
 
 a {
-	color: color("gris-0");
+	color: c("gris-0");
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;

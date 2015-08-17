@@ -1,8 +1,4 @@
-@function ancho($columnas) {
-	@return ((map-get($grilla, "ancho") + map-get($grilla, "calle")) * $columnas) - map-get($grilla, "calle");
-}
-
-@function color($color) {
+@function c($color) {
 	@if map-has-key($colores, $color) {
 		@return map-get($colores, $color);
 	}
@@ -10,10 +6,18 @@
 	@return null;
 }
 
+@function w($columnas) {
+	@if type-of($columnas) == number {
+		@return ((map-get($grilla, "ancho") + map-get($grilla, "calle")) * $columnas) - map-get($grilla, "calle");
+	}
+	@warn "La variable debe ser un número.";
+	@return null;
+}
+
 @function z($index) {
 	@if map-has-key($z-index, $index) {
 		@return map-get($z-index, $index);
 	}
-	@warn "z-index '#{$index}' indefinido.";
+	@warn "Variable '#{$index}' indefinida.";
 	@return null;
 }

@@ -11,12 +11,7 @@ main {
 .columna {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: ancho(nth(map-get($grilla, "columnas"), 1));
-	@if nth(map-get($grilla, "columnas"), 2) {
-		&.extension {
-			max-width: ancho(nth(map-get($grilla, "columnas"), 2));
-		}
-	}
+	max-width: w(map-get($grilla, "columnas"));
 }
 
 [class*="col-"] {
@@ -33,11 +28,8 @@ main {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
 
 @each $media-query, $data in $media-queries {
-	$columnas: map-get($data, "columnas");
-	@if type-of($columnas) == list {
-		$columnas: if(nth($columnas, 2), nth($columnas, 2), nth($columnas, 1));
-	}
 	$calle: map-get($data, "calle");
+	$columnas: map-get($grilla, "columnas");
 	@media (min-width: map-get($data, "ancho-minimo")) {
 		@if $calle {
 			$calle: $calle / 2;

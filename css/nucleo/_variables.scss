@@ -2,6 +2,8 @@ $bdrs				:	0px;
 $img-url			:	"../img/";
 $trs				:	0.2s;
 $z-index			:	(
+	"oculto"		:	-1,
+	"visible"		:	1,
 	"contenido"		:	111,
 	"desplegable"	:	211,
 	"emergente"		:	311,
