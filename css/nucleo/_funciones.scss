@@ -6,6 +6,14 @@
 	@return null;
 }
 
+@function trs($tiempo) {
+	@if map-has-key($transicion, $tiempo) {
+		@return map-get($transicion, $tiempo);
+	}
+	@warn "Transición '#{$tiempo}' indefinida.";
+	@return null;
+}
+
 @function w($columnas) {
 	@if type-of($columnas) == number {
 		@return ((map-get($grilla, "ancho") + map-get($grilla, "calle")) * $columnas) - map-get($grilla, "calle");

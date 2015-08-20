@@ -1,6 +1,10 @@
 $bdrs				:	0px;
 $img-url			:	"../img/";
-$trs				:	0.2s;
+$transicion			:	(
+	"lenta"			:	1s,
+	"normal"		:	0.6s,
+	"rapida"		:	0.2s
+);
 $z-index			:	(
 	"oculto"		:	-1,
 	"visible"		:	1,
