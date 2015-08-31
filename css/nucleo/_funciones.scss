@@ -6,7 +6,7 @@
 	@return null;
 }
 
-@function trs($tiempo) {
+@function trsdu($tiempo) {
 	@if map-has-key($transicion, $tiempo) {
 		@return map-get($transicion, $tiempo);
 	}
