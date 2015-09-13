@@ -69,7 +69,7 @@
 	#encabezado nav {
 		li {
 			display: inline-block;
-			& + li {
+			+ li {
 				margin-left: 0px;
 			}
 		}

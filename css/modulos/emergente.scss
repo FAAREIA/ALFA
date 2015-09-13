@@ -8,7 +8,7 @@
 	top: 0;
 	transition: none;
 	z-index: z("emergente");
-	& > div {
+	> div {
 		background: c("blanco");
 		box-sizing: border-box;
 		left: 50%;

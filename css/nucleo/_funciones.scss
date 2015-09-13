@@ -1,16 +1,24 @@
-@function c($color) {
-	@if map-has-key($colores, $color) {
-		@return map-get($colores, $color);
+@function c($clave) {
+	@if map-has-key($color, $clave) {
+		@return map-get($color, $clave);
 	}
-	@warn "Color '#{$color}' indefinido.";
+	@warn "Color '#{$clave}' indefinido.";
 	@return null;
 }
 
-@function trsdu($tiempo) {
-	@if map-has-key($transicion, $tiempo) {
-		@return map-get($transicion, $tiempo);
+@function ff($clave) {
+	@if map-has-key($fuente, $clave) {
+		@return map-get($fuente, $clave);
 	}
-	@warn "Transición '#{$tiempo}' indefinida.";
+	@warn "Fuente '#{$clave}' indefinida.";
+	@return null;
+}
+
+@function trsdu($clave) {
+	@if map-has-key($transicion, $clave) {
+		@return map-get($transicion, $clave);
+	}
+	@warn "Transicion '#{$clave}' indefinida.";
 	@return null;
 }
 
@@ -18,14 +26,14 @@
 	@if type-of($columnas) == number {
 		@return ((map-get($grilla, "ancho") + map-get($grilla, "calle")) * $columnas) - map-get($grilla, "calle");
 	}
-	@warn "La variable debe ser un número.";
+	@warn "La variable debe ser un numero.";
 	@return null;
 }
 
-@function z($index) {
-	@if map-has-key($z-index, $index) {
-		@return map-get($z-index, $index);
+@function z($clave) {
+	@if map-has-key($z-index, $clave) {
+		@return map-get($z-index, $clave);
 	}
-	@warn "Variable '#{$index}' indefinida.";
+	@warn "Variable z-index '#{$clave}' indefinida.";
 	@return null;
 }

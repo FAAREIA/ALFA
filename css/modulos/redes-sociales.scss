@@ -15,7 +15,7 @@ $redes-sociales		:	(
 	li {
 		height: 0px;
 		width: 0px;
-		& + li {
+		+ li {
 			margin-left: 0px;
 		}
 		@each $red-social, $ancho in $redes-sociales {
