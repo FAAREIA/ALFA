@@ -1,39 +1,42 @@
 @function c($clave) {
-	@if map-has-key($color, $clave) {
-		@return map-get($color, $clave);
-	}
-	@warn "Color '#{$clave}' indefinido.";
-	@return null;
+	@return mapa($color, $clave, "Color inexistente.");
 }
 
 @function ff($clave) {
-	@if map-has-key($fuente, $clave) {
-		@return map-get($fuente, $clave);
+	@return mapa($fuente, $clave, "Fuente inexistente.");
+}
+
+@function grilla($clave) {
+	@return mapa($grilla, $clave, "Clave inexistente en el mapa $grilla.");
+}
+
+@function mapa($mapa, $clave, $mensaje) {
+	@if map-has-key($mapa, $clave) {
+		@return map-get($mapa, $clave);
 	}
-	@warn "Fuente '#{$clave}' indefinida.";
+	@warn "#{$mensaje}";
 	@return null;
 }
 
 @function trsdu($clave) {
-	@if map-has-key($transicion, $clave) {
-		@return map-get($transicion, $clave);
-	}
-	@warn "Transicion '#{$clave}' indefinida.";
-	@return null;
+	@return mapa($transicion, $clave, "Transicion inexistente.");
 }
 
-@function w($columnas) {
+@function w($columnas, $unidad: null) {
 	@if type-of($columnas) == number {
-		@return ((map-get($grilla, "ancho") + map-get($grilla, "calle")) * $columnas) - map-get($grilla, "calle");
+		@if $unidad == null {
+			@return 100% / (grilla("columnas") / $columnas);
+		}
+		@else if $unidad == "px" {
+			@return ((grilla("ancho") + grilla("calle")) * $columnas) - grilla("calle");
+		}
+		@warn "Variable $unidad indefinida, debe ser 'null' o 'px'.";
+		@return null;
 	}
-	@warn "La variable debe ser un numero.";
+	@warn "La variable $columnas debe ser un numero.";
 	@return null;
 }
 
 @function z($clave) {
-	@if map-has-key($z-index, $clave) {
-		@return map-get($z-index, $clave);
-	}
-	@warn "Variable z-index '#{$clave}' indefinida.";
-	@return null;
+	@return mapa($z-index, $clave, "Clave z-index inexistente.");
 }

@@ -8,7 +8,7 @@ $grilla						:	(
 $media-queries				:	(
 	"xxs"					:	(
 		"ancho-minimo"		:	320px,
-		"calle"				:	map-get($grilla, "calle") / 2
+		"calle"				:	grilla("calle") / 2
 	),
 	"xs"					:	(
 		"ancho-minimo"		:	480px,
@@ -20,7 +20,7 @@ $media-queries				:	(
 	),
 	"m"						:	(
 		"ancho-minimo"		:	768px,
-		"calle"				:	map-get($grilla, "calle")
+		"calle"				:	grilla("calle")
 	),
 	"l"						:	(
 		"ancho-minimo"		:	992px,

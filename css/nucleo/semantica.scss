@@ -23,7 +23,7 @@ td {
 	color: c("texto");
 	font-family: ff("texto");
 	font-size: 13px;
-	line-height: map-get($grilla, "interlineado");
+	line-height: grilla("interlineado");
 }
 
 input, select, option, textarea, button {
@@ -33,9 +33,10 @@ input, select, option, textarea, button {
 
 img,
 textarea {
-	line-height: map-get($grilla, "interlineado");
+	line-height: grilla("interlineado");
 }
 
+h2, h3, h4,
 a,
 svg,
 div, li, dd,

@@ -1,5 +1,5 @@
 /*!
-	ALFA v1.4.1
+	ALFA v1.5.0
 	https://github.com/FAAREIA/ALFA
 
 	- - - - - - - - - - - - - - - -
@@ -16,13 +16,11 @@
 		"nucleo/fuentes",
 		"nucleo/reset",
 		"nucleo/maqueta",
-		"nucleo/semantica";
+		"nucleo/semantica",
 
+		// "bibliotecas/",
 
-// @import "bibliotecas/";
-
-
-@import "modulos/boton",
+		"modulos/boton",
 		"modulos/emergente",
 		"modulos/formulario",
 		"modulos/impresion",
@@ -38,10 +36,9 @@
 		"modulos/solo-lectura",
 		"modulos/svg",
 		"modulos/tabla",
-		"modulos/video";
+		"modulos/video",
 
-
-@import "pantallas/home.scss";
+		"pantallas/home/slideshow.scss";
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ajustes de máxima urgencia...
