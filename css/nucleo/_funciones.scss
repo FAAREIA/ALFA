@@ -14,7 +14,7 @@
 	@if map-has-key($mapa, $clave) {
 		@return map-get($mapa, $clave);
 	}
-	@warn "#{$mensaje}";
+	@error "#{$mensaje}";
 	@return null;
 }
 

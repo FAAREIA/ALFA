@@ -1,0 +1,22 @@
+nav.solapas {
+	li {
+		display: inline-block;
+	}
+	button {
+		color: c("gris-0");
+	}
+	.activa {
+	}
+}
+
+div.solapas {
+	overflow: hidden;
+	transition-duration: trsdu("normal");
+	section {
+		display: none;
+	}
+	.activa {
+		animation: trsdu("lenta") aparece;
+		display: block;
+	}
+}
