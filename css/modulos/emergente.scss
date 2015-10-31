@@ -1,5 +1,5 @@
 .emergente {
-	background: rgba(c("negro"), 1.0);
+	background: rgba(c("negro"), 1);
 	bottom: 0;
 	display: none;
 	left: 0;
@@ -19,9 +19,9 @@
 		width: 308px;
 	}
 	.cerrar {
-		fill: c("gris-0");
+		fill: c("negro");
 		&:hover {
-			fill: c("gris-0");
+			fill: c("negro");
 		}
 	}
 }

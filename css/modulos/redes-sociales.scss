@@ -32,10 +32,8 @@ $redes-sociales		:	(
 	}
 	a {
 		display: block;
+		fill: c("blanco");
 		height: inherit;
 		overflow: hidden;
-	}
-	svg {
-		fill: c("blanco");
 	}
 }

@@ -35,15 +35,15 @@ option,
 textarea,
 .campo {
 	background: c("blanco");
-	border: 1px solid c("gris-0");
+	border: 1px solid c("negro");
 	box-sizing: border-box;
-	color: c("gris-0");
+	color: c("negro");
 	height: 0px;
 	line-height: 0px;
 	padding: 0 0px;
 	width: 100%;
 	&:focus {
-		background: c("gris-0");
+		background: c("negro");
 		color: c("blanco");
 	}
 }
@@ -52,8 +52,8 @@ input,
 select,
 textarea {
 	&[disabled] {
-		background: c("gris-0");
-		color: c("gris-F");
+		background: c("negro");
+		color: c("blanco");
 	}
 }
 
@@ -73,11 +73,6 @@ textarea {
 	resize: vertical;
 }
 
-input[type="reset"],
-input[type="submit"] {
-	cursor: pointer;
-}
-
 .campo.input-file {
 	overflow: hidden;
 	padding-right: 0px;
@@ -85,7 +80,7 @@ input[type="submit"] {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	&:before {
-		background: c("gris-0");
+		background: c("negro");
 		color: c("blanco");
 		content: "Subir archivo...";
 		padding: 0 0px;
@@ -120,14 +115,14 @@ select {
 }
 
 ::-moz-placeholder {
-	color: c("gris-0");
+	color: c("negro");
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: c("gris-0");
+	color: c("negro");
 }
 
 ::-webkit-input-placeholder {
-	color: c("gris-0");
+	color: c("negro");
 }

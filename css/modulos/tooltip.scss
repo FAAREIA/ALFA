@@ -22,7 +22,7 @@
 		width: 0;
 	}
 	&:after {
-		background: c("gris-0");
+		background: c("negro");
 		border-radius: 0px;
 		color: c("blanco");
 		content: attr(data-tooltip);
@@ -56,7 +56,7 @@
 	}
 	&.superior {
 		&:before {
-			border-top-color: c("gris-0");
+			border-top-color: c("negro");
 			top: -2px;
 		}
 		&:after {
@@ -65,7 +65,7 @@
 	}
 	&.derecha {
 		&:before {
-			border-right-color: c("gris-0");
+			border-right-color: c("negro");
 			right: -6px;
 		}
 		&:after {
@@ -74,7 +74,7 @@
 	}
 	&.inferior {
 		&:before {
-			border-bottom-color: c("gris-0");
+			border-bottom-color: c("negro");
 			bottom: -3px;
 		}
 		&:after {
@@ -83,7 +83,7 @@
 	}
 	&.izquierda {
 		&:before {
-			border-left-color: c("gris-0");
+			border-left-color: c("negro");
 			left: -6px;
 		}
 		&:after {

@@ -10,7 +10,7 @@
 	.anterior,
 	.siguiente {
 		box-sizing: border-box;
-		fill: c("gris-0");
+		fill: c("negro");
 		height: 100%;
 		overflow: hidden;
 		padding: 0 0px;
@@ -19,7 +19,7 @@
 		width: 72px;
 		z-index: z("contenido");
 		&:hover {
-			fill: c("gris-0");
+			fill: c("negro");
 			padding: 0 0px;
 		}
 		svg {

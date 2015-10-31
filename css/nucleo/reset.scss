@@ -40,9 +40,14 @@ textarea {
 	}
 }
 
+input[type="reset"],
+input[type="submit"],
+button {
+	cursor: pointer;
+}
+
 button {
 	background-color: transparent;
-	cursor: pointer;
 	outline: 0;
 }
 

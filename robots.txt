@@ -1,5 +1,5 @@
 # http://www.robotstxt.org/
 
 User-agent: *
-Sitemap:
 Disallow:
+# Sitemap:
