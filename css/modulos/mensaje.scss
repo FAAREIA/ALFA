@@ -6,7 +6,7 @@
 	position: relative;
 	transition: none;
 	&.fixed {
-		box-shadow: 0 0 6px c("negro");
+		box-shadow: 0 0 0px c("negro");
 		left: 50%;
 		position: fixed;
 		top: 50%;
@@ -15,35 +15,28 @@
 		z-index: z("mensaje");
 	}
 	&.alerta {
-		background: #FFF4C3;
-		border-color: #F9E488;
-		color: #CA910A;
-		fill: #CA910A;
+		background: c("alerta");
+		border-color: darken(c("alerta"), 15%);
 	}
 	&.error {
-		background: #FFD7D0;
-		border-color: #FFB1A3;
-		color: #E93D30;
-		fill: #E93D30;
+		background: c("error");
+		border-color: darken(c("error"), 15%);
 	}
 	&.satisfactorio {
-		background: #DDFFEF;
-		border-color: #B9DDCC;
-		color: #18A964;
-		fill: #18A964;
+		background: c("satisfactorio");
+		border-color: darken(c("satisfactorio"), 15%);
 	}
 	h2, h3,
 	p, small, a,
 	li, dt, dd,
 	.h2, .h3 {
-		color: inherit;
+		color: c("blanco");
 	}
 	.cerrar {
-		fill: c("negro");
-		opacity: 0.5;
+		fill: c("blanco");
+		fill-opacity: 0.5;
 		&:hover {
-			fill: inherit;
-			opacity: 1;
+			fill: c("negro");
 		}
 	}
 }
