@@ -19,7 +19,6 @@ main {
 
 [class*="col-"] {
 	box-sizing: border-box;
-	display: inline-block;
 }
 
 [class*="-empuje-"],
@@ -45,6 +44,9 @@ main {
 				margin-left: 0 - $calle;
 				margin-right: 0 - $calle;
 			}
+		}
+		[class*="col-#{$media-query}-"] {
+			display: inline-block;
 		}
 		@for $i from 1 through $columnas {
 			$ancho: 100% / ($columnas / $i);
