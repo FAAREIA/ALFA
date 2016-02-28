@@ -1,0 +1,33 @@
+$grid					:	(
+	"columns"			:	12,
+	"gutter"			:	24px,
+	"line-height"		:	20px,
+	"width"				:	60px
+);
+
+$media-queries			:	(
+	"xxs"				:	(
+		"gutter"		:	grid("gutter") / 2,
+		"min-width"		:	320px
+	),
+	"xs"				:	(
+		"gutter"		:	null,
+		"min-width"		:	480px
+	),
+	"s"					:	(
+		"gutter"		:	null,
+		"min-width"		:	640px
+	),
+	"m"					:	(
+		"gutter"		:	grid("gutter"),
+		"min-width"		:	768px
+	),
+	"l"					:	(
+		"gutter"		:	null,
+		"min-width"		:	992px
+	),
+	"xl"				:	(
+		"gutter"		:	null,
+		"min-width"		:	1200px
+	)
+);

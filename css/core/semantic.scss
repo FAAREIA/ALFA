@@ -1,0 +1,158 @@
+h1, h2, h3, h4, h5, h6,
+dt,
+legend,
+th,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	color: c("header");
+	font-family: ff("header");
+	font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	a {
+		color: inherit;
+		&:hover {
+			color: c("link");
+		}
+	}
+}
+
+body,
+p, small, address, time, abbr, blockquote, q, cite,
+li, dd,
+label, input, select, option, textarea, button,
+td {
+	color: c("text");
+	font-family: ff("text");
+	font-size: 13px;
+	line-height: grid("line-height");
+}
+
+h1, h2, h3, h4, h5, h6,
+a,
+svg,
+div, li, dd,
+label, input, select, option, textarea, button,
+td,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	transition: all trsdu("fast");
+}
+
+header, footer, section, article, aside, nav,
+figure,
+div, ol, ul, dl,
+form, fieldset,
+tr,
+iframe {
+	line-height: 0;
+}
+
+::selection {
+	background: c("black");
+	color: c("white");
+}
+
+h1,
+.h1 {
+	font-size: 30px;
+	line-height: 30px;
+	+ h2,
+	+ .h2 {
+		margin-top: 0px;
+	}
+	+ p,
+	+ ol,
+	+ ul,
+	+ dl {
+		margin-top: 0px;
+	}
+}
+
+h2,
+.h2 {
+	font-size: 18px;
+	line-height: 18px;
+	+ h3,
+	+ .h3 {
+		margin-top: 0px;
+	}
+	+ p,
+	+ ol,
+	+ ul,
+	+ dl {
+		margin-top: 0px;
+	}
+	p + &,
+	ol + &,
+	ul + &,
+	dl + & {
+		margin-top: 0px;
+	}
+}
+
+h3,
+.h3 {
+	font-size: 13px;
+	line-height: 13px;
+	+ h4,
+	+ .h4 {
+		margin-top: 0px;
+	}
+	+ p,
+	+ ol,
+	+ ul,
+	+ dl {
+		margin-top: 0px;
+	}
+	p + &,
+	ol + &,
+	ul + &,
+	dl + & {
+		margin-top: 0px;
+	}
+}
+
+h4,
+.h4 {
+}
+
+h5,
+.h5 {
+}
+
+h6,
+.h6 {
+}
+
+p {
+	+ p,
+	+ ol,
+	+ ul,
+	+ dl,
+	+ form {
+		margin-top: 0px;
+	}
+	ol + &,
+	ul + &,
+	dl + & {
+		margin-top: 0px;
+	}
+	small {
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+}
+
+a {
+	color: c("link");
+	fill: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	&:hover {
+	}
+}

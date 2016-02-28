@@ -1,1 +1,1 @@
-sass --style compressed beta.scss:estilos.css
+sass --style compressed beta.scss:styles.css

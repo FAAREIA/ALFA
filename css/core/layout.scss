@@ -1,0 +1,68 @@
+body {
+}
+
+#header {
+	position: relative;
+}
+
+main {
+}
+
+#footer {
+}
+
+.column {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: w(grid("columns"), "px");
+}
+
+[class*="col-"] {
+	box-sizing: border-box;
+}
+
+[class*="-pull-"],
+[class*="-push-"] {
+	position: relative;
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
+
+@each $media-query, $data in $media-queries {
+	$columns: grid("columns");
+	$gutter: map-get($data, "gutter");
+	@media (min-width: map-get($data, "min-width")) {
+		@if $gutter {
+			$gutter: $gutter / 2;
+			.column,
+			.columns [class*="col-"] {
+				padding-left: $gutter;
+				padding-right: $gutter;
+			}
+			.columns {
+				margin-left: 0 - $gutter;
+				margin-right: 0 - $gutter;
+			}
+		}
+		[class*="col-#{$media-query}-"] {
+			display: inline-block;
+		}
+		@for $i from 1 through $columns {
+			$width: 100% / ($columns / $i);
+			.col-#{$media-query + "-" + $i} {
+				width: $width;
+			}
+			.col-#{$media-query + "-pull-" + $i} {
+				left: 0 - $width;
+			}
+			.col-#{$media-query + "-push-" + $i} {
+				left: $width;
+			}
+		}
+		.col-#{$media-query}-pull-0,
+		.col-#{$media-query}-push-0 {
+			left: auto;
+		}
+	}
+}

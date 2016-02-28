@@ -1,0 +1,46 @@
+@function bdrs($key) {
+	@return map($border-radius, $key, "Nonexistent border-radius.");
+}
+
+@function c($key) {
+	@return map($color, $key, "Nonexistent color.");
+}
+
+@function ff($key) {
+	@return map($font-family, $key, "Nonexistent font-family.");
+}
+
+@function grid($key) {
+	@return map($grid, $key, "Nonexistent $grid key.");
+}
+
+@function map($map, $key, $message) {
+	@if map-has-key($map, $key) {
+		@return map-get($map, $key);
+	}
+	@error "#{$message}";
+	@return null;
+}
+
+@function trsdu($key) {
+	@return map($transition-duration, $key, "Nonexistent transition duration.");
+}
+
+@function w($columns, $unit: null) {
+	@if type-of($columns) == number {
+		@if $unit == null {
+			@return 100% / (grid("columns") / $columns);
+		}
+		@else if $unit == "px" {
+			@return ((grid("width") + grid("gutter")) * $columns) - grid("gutter");
+		}
+		@error "Undefined $unit variable.";
+		@return null;
+	}
+	@error "$columns variable must be a number.";
+	@return null;
+}
+
+@function z($key) {
+	@return map($z-index, $key, "Nonexistent z-index.");
+}

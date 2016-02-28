@@ -1,0 +1,36 @@
+$font-family				:	(
+	"header"				:	("Open Sans", sans-serif),
+	"text"					:	("Open Sans", sans-serif)
+);
+
+$local-font					:	(
+	"header"				:	null,
+	"header-style"			:	null,
+	"header-variant"		:	null,
+	"header-weight"			:	null,
+	"text"					:	null,
+	"text-style"			:	null,
+	"text-variant"			:	null,
+	"text-weight"			:	null
+);
+
+@if map-get($local-font, "header") {
+	@for $i from 1 through length(map-get($local-font, "header-variant")) {
+		@font-face {
+			font-family: nth(ff("header"), 1);
+			font-style: nth(map-get($local-font, "header-style"), $i);
+			font-weight: nth(map-get($local-font, "header-weight"), $i);
+			src: url("#{map-get($path, "font") + map-get($local-font, "header") + "-" + nth(map-get($local-font, "header-variant"), $i)}.ttf");
+		}
+	}
+	@if nth(ff("header"), 1) != nth(ff("text"), 1) {
+		@for $i from 1 through length(map-get($local-font, "text-variant")) {
+			@font-face {
+				font-family: nth(ff("text"), 1);
+				font-style: nth(map-get($local-font, "text-style"), $i);
+				font-weight: nth(map-get($local-font, "text-weight"), $i);
+				src: url("#{map-get($path, "font") + map-get($local-font, "text") + "-" + nth(map-get($local-font, "text-variant"), $i)}.ttf");
+			}
+		}
+	}
+}

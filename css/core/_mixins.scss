@@ -1,0 +1,7 @@
+@mixin bg ($image, $x: 0, $y: 0, $repeat: repeat) {
+	background: url("#{map-get($path, "image") + $image}") $x $y $repeat;
+}
+
+@mixin bgi ($image) {
+	background-image: url("#{map-get($path, "image") + $image}");
+}

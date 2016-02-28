@@ -1,0 +1,39 @@
+$social-media			:	(
+	"facebook"			:	10px,
+	"feed"				:	10px,
+	"google-plus"		:	10px,
+	"instagram"			:	10px,
+	"linkedin"			:	10px,
+	"myspace"			:	10px,
+	"pinterest"			:	10px,
+	"twitter"			:	10px,
+	"vimeo"				:	10px,
+	"youtube"			:	10px
+);
+
+.social-media {
+	li {
+		height: 0px;
+		width: 0px;
+		+ li {
+			margin-left: 0px;
+		}
+		@each $social-network, $width in $social-media {
+			&.#{$social-network} {
+				background: c($social-network);
+				&:hover {
+					background: lighten(c($social-network), 10%);
+				}
+				svg {
+					width: $width;
+				}
+			}
+		}
+	}
+	a {
+		display: block;
+		fill: c("white");
+		height: inherit;
+		overflow: hidden;
+	}
+}

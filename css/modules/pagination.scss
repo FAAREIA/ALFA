@@ -1,0 +1,22 @@
+.pagination {
+	&.number {
+		li {
+		}
+		button {
+			&:hover,
+			&.active {
+			}
+		}
+	}
+	&.shape {
+		li {
+		}
+		button {
+			height: 0px;
+			width: 0px;
+			&:hover,
+			&.active {
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+nav.tabs {
+	li {
+		display: inline-block;
+	}
+	button {
+		color: c("black");
+	}
+	.active {
+	}
+}
+
+div.tabs {
+	overflow: hidden;
+	transition-duration: trsdu("normal");
+	section {
+		display: none;
+	}
+	.active {
+		animation: trsdu("slow") fade-in;
+		display: block;
+	}
+}

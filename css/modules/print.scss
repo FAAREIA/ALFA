@@ -1,0 +1,36 @@
+@media print {
+	* {
+		box-shadow: none !important;
+		color: c("black") !important;
+		text-shadow: none !important;
+	}
+	body {
+		background: none !important;
+	}
+	#header,
+	#footer {
+		display: none;
+	}
+	h1, h2, h3, h4, h5, h6,
+	dt,
+	legend,
+	th,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		page-break-inside: avoid;
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	a {
+		&[href^="http"] {
+			text-decoration: underline;
+			&:after {
+				content: " (" attr(href) ")";
+			}
+		}
+	}
+	img {
+		height: auto !important;
+		max-width: 100% !important;
+	}
+}

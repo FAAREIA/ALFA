@@ -1,46 +1,46 @@
 /*!
-	ALFA v1.8.0
+	ALFA v2.0.0
 	https://github.com/FAAREIA/ALFA
 	- - - - - - - - - - - - - - - -
-	Archivo CSS v0.1
-	Compilado con SASS v3.4.19
+	Compiled with SASS v3.4.21
+	CSS file v0.1
 */
 
-@import "nucleo/funciones",
-		"nucleo/variables",
-		"nucleo/mixins",
-		"nucleo/grilla",
-		"nucleo/colores",
-		"nucleo/fuentes",
-		"nucleo/reset",
-		"nucleo/maqueta",
-		"nucleo/semantica",
+@import "core/functions",
+		"core/variables",
+		"core/mixins",
+		"core/grid",
+		"core/colors",
+		"core/fonts",
+		"core/reset",
+		"core/layout",
+		"core/semantic",
 
-		// "bibliotecas/",
+		// "libraries/",
 
-		"modulos/animacion",
-		"modulos/articulo",
-		"modulos/boton",
-		"modulos/emergente",
-		"modulos/formulario",
-		"modulos/impresion",
-		"modulos/isologotipo",
-		"modulos/legales",
-		"modulos/lista",
-		"modulos/mensaje",
-		"modulos/nav",
-		"modulos/paginado",
-		"modulos/publicidad",
-		"modulos/redes-sociales",
-		"modulos/slideshow",
-		"modulos/solapas",
-		"modulos/solo-lectura",
-		"modulos/svg",
-		"modulos/tabla",
-		"modulos/tooltip",
-		"modulos/video",
+		"modules/advertising",
+		"modules/alert",
+		"modules/animation",
+		"modules/article",
+		"modules/button",
+		"modules/form",
+		"modules/legals",
+		"modules/list",
+		"modules/logotype",
+		"modules/modal",
+		"modules/nav",
+		"modules/pagination",
+		"modules/print",
+		"modules/screen-read",
+		"modules/slideshow",
+		"modules/social-media",
+		"modules/svg",
+		"modules/table",
+		"modules/tabs",
+		"modules/tooltip",
+		"modules/video",
 
-		"pantallas/home/slideshow.scss";
+		"pages/home/slideshow.scss";
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Ajustes de máxima urgencia...
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Express CSS code...

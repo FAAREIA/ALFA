@@ -1,0 +1,39 @@
+.slideshow {
+	position: relative;
+	.slides {
+		li {
+			transition: none;
+		}
+	}
+	.pagination {
+	}
+	.previous,
+	.next {
+		box-sizing: border-box;
+		fill: c("black");
+		height: 100%;
+		overflow: hidden;
+		padding: 0 0px;
+		position: absolute;
+		top: 0;
+		width: 72px;
+		z-index: z("content");
+		&:hover {
+			fill: c("black");
+			padding: 0 0px;
+		}
+		svg {
+			margin: 0;
+			width: 0px;
+		}
+	}
+	.previous {
+		left: 0;
+	}
+	.next {
+		right: 0;
+		svg {
+			margin-left: auto;
+		}
+	}
+}

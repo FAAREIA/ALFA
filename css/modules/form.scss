@@ -1,0 +1,126 @@
+form {
+	div {
+		+ div {
+			margin-top: 0px;
+		}
+	}
+	.description {
+	}
+}
+
+fieldset {
+}
+
+legend {
+}
+
+label {
+	display: block;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+select,
+option,
+textarea,
+.form-element {
+	background: c("white");
+	border: 1px solid c("black");
+	box-sizing: border-box;
+	color: c("black");
+	height: 0px;
+	line-height: 0px;
+	padding: 0 0px;
+	width: 100%;
+	&:focus {
+		background: c("black");
+		color: c("white");
+	}
+}
+
+input,
+select,
+textarea {
+	&:invalid {
+	}
+	&:valid {
+	}
+	&[disabled] {
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+}
+
+select {
+}
+
+option {
+	border: 0;
+}
+
+textarea {
+	height: 0px;
+	resize: vertical;
+}
+
+.form-element.input-file {
+	overflow: hidden;
+	padding-right: 0px;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	&:before {
+		background: c("black");
+		color: c("white");
+		content: "Browse...";
+		padding: 0 0px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	&:after {
+		color: inherit;
+		content: attr(data-file);
+	}
+	input {
+		cursor: pointer;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+	}
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Fixes
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+select {
+	padding-left: 0px; // This padding-left must be less than the one settled above because browsers add like a phantom "text-indent" value.
+	padding-right: 0; // IE fix till version 11 at least.
+}
+
+:-ms-input-placeholder {
+	color: c("black");
+}
+
+::-moz-placeholder {
+	color: c("black");
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: c("black");
+}

@@ -1,0 +1,42 @@
+.alert {
+	border-style: solid;
+	border-width: 0px;
+	box-sizing: border-box;
+	padding: 0px 0px;
+	position: relative;
+	transition: none;
+	&.error {
+		background: c("error");
+		border-color: darken(c("error"), 15%);
+	}
+	&.success {
+		background: c("success");
+		border-color: darken(c("success"), 15%);
+	}
+	&.warning {
+		background: c("warning");
+		border-color: darken(c("warning"), 15%);
+	}
+	&.fixed {
+		box-shadow: 0px 0px 0px c("black");
+		left: 50%;
+		position: fixed;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 308px;
+		z-index: z("alert");
+	}
+	h2, h3, h4,
+	p, a, small,
+	li, dt, dd,
+	.h2, .h3, .h4 {
+		color: c("white");
+	}
+	.close {
+		fill: c("white");
+		fill-opacity: 0.5;
+		&:hover {
+			fill: c("black");
+		}
+	}
+}

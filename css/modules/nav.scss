@@ -1,0 +1,77 @@
+#header nav {
+	li {
+	}
+	a,
+	button {
+	}
+}
+
+.nav-responsive {
+	height: 60px;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 100%;
+	span {
+		background: c("black");
+		display: block;
+		height: 4px;
+		margin: 0 0 0 auto;
+		position: relative;
+		text-indent: 48px;
+		white-space: nowrap;
+		width: 24px;
+		&:before,
+		&:after {
+			background: inherit;
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+		&:before {
+			top: -200%;
+		}
+		&:after {
+			bottom: -200%;
+		}
+	}
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
+
+@media (max-width: 767px) {
+	#header nav {
+		overflow: hidden;
+		&.open {
+			li {
+				border-top-width: 1px;
+				height: 10px;
+				opacity: 1;
+			}
+		}
+		li {
+			border-top: 0 solid c("black");
+			height: 0;
+			opacity: 0;
+			transition: all trsdu("normal"), border trsdu("fast");
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	#header nav {
+		li {
+			display: inline-block;
+			+ li {
+				margin-left: 0px;
+			}
+		}
+	}
+	.nav-responsive {
+		display: none;
+	}
+}

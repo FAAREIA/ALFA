@@ -1,0 +1,23 @@
+$border-radius				:	(
+	"small"					:	0px,
+	"normal"				:	0px,
+	"large"					:	0px
+);
+$path						:	(
+	"font"					:	"../fonts/",
+	"image"					:	"../img/"
+);
+$transition-duration		:	(
+	"fast"					:	0.2s,
+	"normal"				:	0.6s,
+	"slow"					:	1s
+);
+$z-index					:	(
+	"hidden"				:	-1,
+	"visible"				:	1,
+	"content"				:	111,
+	"dropdown"				:	211,
+	"modal"					:	311,
+	"alert"					:	411,
+	"advertising"			:	511
+);
