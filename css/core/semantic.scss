@@ -141,7 +141,6 @@ p {
 	small {
 		color: inherit;
 		font-size: inherit;
-		font-weight: inherit;
 		line-height: inherit;
 	}
 }
@@ -149,10 +148,6 @@ p {
 a {
 	color: c("link");
 	fill: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: inherit;
 	&:hover {
 	}
 }
