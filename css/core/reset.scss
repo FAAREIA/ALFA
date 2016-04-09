@@ -18,8 +18,8 @@ a {
 	text-decoration: none;
 }
 
-q:before,
-q:after {
+q::before,
+q::after {
 	content: none;
 }
 

@@ -22,8 +22,8 @@
 		text-indent: 48px;
 		white-space: nowrap;
 		width: 24px;
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			background: inherit;
 			content: "";
 			height: 100%;
@@ -31,10 +31,10 @@
 			position: absolute;
 			width: 100%;
 		}
-		&:before {
+		&::before {
 			top: -200%;
 		}
-		&:after {
+		&::after {
 			bottom: -200%;
 		}
 	}

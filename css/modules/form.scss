@@ -77,7 +77,7 @@ textarea {
 	position: relative;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	&:before {
+	&::before {
 		background: c("black");
 		color: c("white");
 		content: "Browse...";
@@ -86,7 +86,7 @@ textarea {
 		right: 0;
 		top: 0;
 	}
-	&:after {
+	&::after {
 		color: inherit;
 		content: attr(data-file);
 	}
