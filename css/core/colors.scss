@@ -1,4 +1,15 @@
 $color					:	(
+	"primary"			:	null,
+	"secondary"			:	null,
+
+	"header"			:	#000000,
+	"text"				:	#000000,
+	"link"				:	#000000,
+
+	"error"				:	#FA4242,
+	"success"			:	#40D784,
+	"warning"			:	#FFCC33,
+
 	"black"				:	#000000,
 	"gray-0"			:	#000000,
 	"gray-1"			:	#111111,
@@ -17,14 +28,6 @@ $color					:	(
 	"gray-E"			:	#EEEEEE,
 	"gray-F"			:	#FFFFFF,
 	"white"				:	#FFFFFF,
-
-	"header"			:	#333333,
-	"text"				:	#333333,
-	"link"				:	#888888,
-
-	"error"				:	#FA4242,
-	"success"			:	#40D784,
-	"warning"			:	#FFCC33,
 
 	"android"			:	#A4C439,
 	"apple"				:	#666666,

@@ -2,9 +2,9 @@
 	<symbol id="logo" viewBox="0 0 0 0">
 		<title>Logo</title>
 	</symbol>
-	<symbol id="cross" viewBox="0 0 256 256">
+	<symbol id="cross" viewBox="0 0 24 24">
 		<title>Cross</title>
-		<polygon points="256,211.2 172.7,128 256,44.7 211.2,0 128,83.2 44.8,0 0,44.7 83.3,128 0,211.2 44.7,256 128,172.7 211.3,256"/>
+		<path d="M24,20.2L15.7,12l8.2-8.3L20.2,0L12,8.3L3.7,0.1L0,3.8L8.3,12l-8.2,8.3L3.8,24l8.2-8.3l8.3,8.2L24,20.2z"/>
 	</symbol>
 	<symbol id="iso-android" viewBox="0 0 215 254">
 		<title>Android</title>
