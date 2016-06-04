@@ -1,3 +1,7 @@
+html {
+	font-size: $html-font-size + px;
+}
+
 h1, h2, h3, h4, h5, h6,
 dt,
 legend,
@@ -25,14 +29,14 @@ label, input, select, option, textarea, button,
 td {
 	color: c("text");
 	font-family: ff("text");
-	font-size: 13px;
-	line-height: grid("line-height");
+	font-size: rem(14);
+	line-height: rem(24);
 }
 
 h1, h2, h3, h4, h5, h6,
-a,
+p, a,
 svg,
-div, ol, ul, li, dd,
+div, ol, ul, li, dt, dd,
 label, input, select, option, textarea, button,
 td,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -55,8 +59,8 @@ iframe {
 
 h1,
 .h1 {
-	font-size: 30px;
-	line-height: 30px;
+	font-size: rem(40);
+	line-height: rem(48);
 	+ h2,
 	+ .h2 {
 		margin-top: 0px;
@@ -71,8 +75,8 @@ h1,
 
 h2,
 .h2 {
-	font-size: 18px;
-	line-height: 18px;
+	font-size: rem(30);
+	line-height: rem(36);
 	+ h3,
 	+ .h3 {
 		margin-top: 0px;
@@ -93,8 +97,8 @@ h2,
 
 h3,
 .h3 {
-	font-size: 13px;
-	line-height: 13px;
+	font-size: rem(21);
+	line-height: rem(24);
 	+ h4,
 	+ .h4 {
 		margin-top: 0px;

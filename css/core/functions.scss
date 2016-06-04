@@ -22,13 +22,32 @@
 	@return null;
 }
 
+@function rem($lengths) {
+	$list: ();
+	@each $length in $lengths {
+		@if type-of($length) == number and unitless($length) {
+			@if $length != 0 {
+				$list: append($list, ($length / $html-font-size) + rem);
+			}
+			@else {
+				$list: append($list, $length);
+			}
+		}
+		@else {
+			@error "$lengths variable must be a number or a list of numbers without unit.";
+			@return null;
+		}
+	}
+	@return $list;
+}
+
 @function trsdu($key) {
 	@return map($transition-duration, $key, "Nonexistent transition duration.");
 }
 
-@function w($columns, $unit: null) {
-	@if type-of($columns) == number {
-		@if $unit == null {
+@function w($columns, $unit: "%") {
+	@if type-of($columns) == number and $columns != 0 {
+		@if $unit == "%" {
 			@return 100% / (grid("columns") / $columns);
 		}
 		@else if $unit == "px" {
@@ -37,7 +56,7 @@
 		@error "Undefined $unit variable.";
 		@return null;
 	}
-	@error "$columns variable must be a number.";
+	@error "$columns variable must be a non-zero number.";
 	@return null;
 }
 
