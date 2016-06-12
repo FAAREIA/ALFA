@@ -8,6 +8,10 @@
 	top: 0;
 	transition: none;
 	z-index: z("modal");
+	&[data-modal-open] {
+		animation: trsdu("slow") fade-in;
+		display: block;
+	}
 	> div {
 		background: c("white");
 		box-sizing: border-box;

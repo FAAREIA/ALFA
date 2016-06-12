@@ -12,10 +12,14 @@ $(document).ready(function() {
 		$(this).closest('.alert').fadeOut(240);
 	});
 
-	// Modal - Open
+	// Modal - Open function
+	function modal_open(modal) {
+		$('.modal[data-modal="' + modal + '"]').fadeIn(480);
+	}
+	// Modal - Open with button
 	$('button[data-modal]').on('click', function() {
 		var modal = $(this).attr('data-modal');
-		$('.modal[data-modal="' + modal + '"]').fadeIn(480);
+		modal_open(modal);
 	});
 	// Modal - Close
 	$('.modal').on('click', function(e) {
