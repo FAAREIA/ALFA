@@ -1,5 +1,6 @@
 .tooltip {
 	position: relative;
+	&:focus,
 	&:hover {
 		&::before,
 		&::after {
@@ -15,19 +16,19 @@
 		visibility: hidden;
 	}
 	&::before {
-		border: 4px solid transparent;
+		border: 0.4rem solid transparent;
 		content: "";
 		height: 0;
 		width: 0;
 	}
 	&::after {
-		background: c("black");
-		border-radius: 0px;
-		color: c("white");
+		background: black;
+		border-radius: bdrs("small");
+		color: white;
 		content: attr(data-tooltip);
-		font-size: 11px;
-		line-height: 14px;
-		padding: 0px 0px;
+		font-size: 1.1rem;
+		line-height: lh(1.1, 1.4);
+		padding: 0rem 0rem;
 		white-space: nowrap;
 	}
 	&.top,
@@ -48,45 +49,45 @@
 	}
 	&.top {
 		&::before {
-			border-top-color: c("black");
-			top: -2px;
+			border-top-color: black;
+			top: -0.2rem;
 		}
 		&::after {
-			bottom: calc(100% + 2px);
+			bottom: calc(100% + 0.2rem);
 		}
 	}
 	&.right {
 		&::before {
-			border-right-color: c("black");
-			right: -6px;
+			border-right-color: black;
+			right: -0.6rem;
 		}
 		&::after {
-			left: calc(100% + 6px);
+			left: calc(100% + 0.6rem);
 		}
 	}
 	&.bottom {
 		&::before {
-			border-bottom-color: c("black");
-			bottom: -3px;
+			border-bottom-color: black;
+			bottom: -0.3rem;
 		}
 		&::after {
-			top: calc(100% + 3px);
+			top: calc(100% + 0.3rem);
 		}
 	}
 	&.left {
 		&::before {
-			border-left-color: c("black");
-			left: -6px;
+			border-left-color: black;
+			left: -0.6rem;
 		}
 		&::after {
-			right: calc(100% + 6px);
+			right: calc(100% + 0.6rem);
 		}
 	}
 	&.large {
 		&::after {
 			text-align: center;
 			white-space: normal;
-			width: w(3, "px");
+			width: w(3, "rem");
 		}
 	}
 }

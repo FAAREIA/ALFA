@@ -1,20 +1,23 @@
 $social-media			:	(
-	"facebook"			:	0px,
-	"feed"				:	0px,
-	"google-plus"		:	0px,
-	"instagram"			:	0px,
-	"linkedin"			:	0px,
-	"myspace"			:	0px,
-	"pinterest"			:	0px,
-	"twitter"			:	0px,
-	"vimeo"				:	0px,
-	"youtube"			:	0px
+	"facebook"			:	0rem,
+	"feed"				:	0rem,
+	"google-plus"		:	0rem,
+	"instagram"			:	0rem,
+	"linkedin"			:	0rem,
+	"myspace"			:	0rem,
+	"pinterest"			:	0rem,
+	"spotify"			:	0rem,
+	"tumblr"			:	0rem,
+	"twitter"			:	0rem,
+	"vimeo"				:	0rem,
+	"youtube"			:	0rem
 );
 
 .social-media {
 	@each $social-network, $width in $social-media {
 		.#{$social-network} {
 			background: c($social-network);
+			&:focus,
 			&:hover {
 				background: lighten(c($social-network), 10%);
 			}
@@ -24,15 +27,16 @@ $social-media			:	(
 		}
 	}
 	li {
-		height: 0px;
-		width: 0px;
+		display: inline-block;
+		height: 0rem;
+		width: 0rem;
 		+ li {
-			margin-left: 0px;
+			margin-left: 0rem;
 		}
 	}
 	a {
 		display: block;
-		fill: c("white");
+		fill: white;
 		height: inherit;
 		overflow: hidden;
 	}

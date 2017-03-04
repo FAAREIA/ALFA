@@ -6,12 +6,47 @@
 	@return map($color, $key, "Nonexistent color.");
 }
 
+@function em($font-size, $values) {
+	@if type-of($font-size) == number and unitless($font-size) {
+		$list: ();
+		@each $value in $values {
+			@if type-of($value) == number and unitless($value) {
+				@if $value != 0 {
+					$list: append($list, ($value / $font-size) + em);
+				}
+				@else {
+					$list: append($list, $value);
+				}
+			}
+			@else {
+				@error "$values argument must be one or multiple unitless numbers.";
+				@return null;
+			}
+		}
+		@return $list;
+	}
+	@error "$font-size argument must be a unitless number.";
+	@return null;
+}
+
 @function ff($key) {
 	@return map($font-family, $key, "Nonexistent font-family.");
 }
 
 @function grid($key) {
 	@return map($grid, $key, "Nonexistent $grid key.");
+}
+
+@function lh($font-size, $value) {
+	@if type-of($font-size) == number and unitless($font-size) {
+		@if type-of($value) == number and unitless($value) {
+			@return $value / $font-size;
+		}
+		@error "$value argument must be a unitless number.";
+		@return null;
+	}
+	@error "$font-size argument must be a unitless number.";
+	@return null;
 }
 
 @function map($map, $key, $message) {
@@ -22,41 +57,22 @@
 	@return null;
 }
 
-@function rem($lengths) {
-	$list: ();
-	@each $length in $lengths {
-		@if type-of($length) == number and unitless($length) {
-			@if $length != 0 {
-				$list: append($list, ($length / $html-font-size) + rem);
-			}
-			@else {
-				$list: append($list, $length);
-			}
-		}
-		@else {
-			@error "$lengths variable must be a number or a list of numbers without unit.";
-			@return null;
-		}
-	}
-	@return $list;
-}
-
 @function trsdu($key) {
-	@return map($transition-duration, $key, "Nonexistent transition duration.");
+	@return map($transition-duration, $key, "Nonexistent transition-duration.");
 }
 
 @function w($columns, $unit: "%") {
-	@if type-of($columns) == number and $columns != 0 {
+	@if type-of($columns) == number and unitless($columns) and $columns != 0 {
 		@if $unit == "%" {
 			@return 100% / (grid("columns") / $columns);
 		}
-		@else if $unit == "px" {
+		@else if $unit == "rem" {
 			@return ((grid("width") + grid("gutter")) * $columns) - grid("gutter");
 		}
-		@error "Undefined $unit variable.";
+		@error "Undefined $unit argument.";
 		@return null;
 	}
-	@error "$columns variable must be a non-zero number.";
+	@error "$columns argument must be a non-zero unitless number.";
 	@return null;
 }
 

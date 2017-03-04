@@ -1,5 +1,5 @@
 .modal {
-	background: rgba(c("black"), 1);
+	background: rgba(black, 1);
 	bottom: 0;
 	display: none;
 	left: 0;
@@ -13,19 +13,20 @@
 		display: block;
 	}
 	> div {
-		background: c("white");
+		background: white;
 		box-sizing: border-box;
 		left: 50%;
-		padding: 0px 0px;
+		padding: 0rem 0rem;
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: 308px;
+		width: 30.8rem;
 	}
 	.close {
-		fill: c("black");
+		fill: black;
+		&:focus,
 		&:hover {
-			fill: c("black");
+			fill: black;
 		}
 	}
 }

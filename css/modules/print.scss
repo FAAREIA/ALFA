@@ -1,7 +1,7 @@
 @media print {
 	* {
 		box-shadow: none !important;
-		color: c("black") !important;
+		color: black !important;
 		text-shadow: none !important;
 	}
 	body {
@@ -11,15 +11,12 @@
 	#footer {
 		display: none;
 	}
+	.h1, .h2, .h3, .h4, .h5, .h6,
 	h1, h2, h3, h4, h5, h6,
 	dt,
 	legend,
-	th,
-	.h1, .h2, .h3, .h4, .h5, .h6 {
+	th {
 		page-break-inside: avoid;
-	}
-	abbr[title]::after {
-		content: " (" attr(title) ")";
 	}
 	a {
 		&[href^="http"] {
@@ -28,6 +25,9 @@
 				content: " (" attr(href) ")";
 			}
 		}
+	}
+	abbr[title]::after {
+		content: " (" attr(title) ")";
 	}
 	img {
 		height: auto !important;

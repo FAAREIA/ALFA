@@ -7,21 +7,21 @@
 }
 
 .nav-responsive {
-	height: 60px;
+	height: 6rem;
 	overflow: hidden;
 	position: absolute;
-	right: 0px;
-	top: 0px;
+	right: 0rem;
+	top: 0rem;
 	width: 100%;
 	span {
-		background: c("black");
+		background: black;
 		display: block;
-		height: 4px;
+		height: 0.4rem;
 		margin: 0 0 0 auto;
 		position: relative;
-		text-indent: 48px;
+		text-indent: 4.8rem;
 		white-space: nowrap;
-		width: 24px;
+		width: 2.4rem;
 		&::before,
 		&::after {
 			background: inherit;
@@ -43,18 +43,18 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
 
-@media (max-width: 767px) {
+@media (max-width: 47.75em) {
 	#header nav {
 		overflow: hidden;
 		&.open {
 			li {
-				border-top-width: 1px;
-				height: 10px;
+				border-top-width: 0.1rem;
+				height: 0rem;
 				opacity: 1;
 			}
 		}
 		li {
-			border-top: 0 solid c("black");
+			border-top: 0 solid black;
 			height: 0;
 			opacity: 0;
 			transition: all trsdu("normal"), border trsdu("fast");
@@ -62,12 +62,12 @@
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
 	#header nav {
 		li {
 			display: inline-block;
 			+ li {
-				margin-left: 0px;
+				margin-left: 0rem;
 			}
 		}
 	}

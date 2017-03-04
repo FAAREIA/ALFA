@@ -1,32 +1,69 @@
 $grid					:	(
 	"columns"			:	12,
-	"gutter"			:	24px,
-	"width"				:	70px
+	"gutter"			:	2.4rem,
+	"width"				:	7rem
 );
 
-$media-queries			:	(
+$media-query			:	(
 	"xxs"				:	(
 		"gutter"		:	grid("gutter") / 2,
-		"min-width"		:	320px
+		"min-width"		:	20em
 	),
 	"xs"				:	(
 		"gutter"		:	null,
-		"min-width"		:	480px
+		"min-width"		:	30em
 	),
 	"s"					:	(
 		"gutter"		:	null,
-		"min-width"		:	640px
+		"min-width"		:	40em
 	),
 	"m"					:	(
 		"gutter"		:	grid("gutter"),
-		"min-width"		:	768px
+		"min-width"		:	48em
 	),
 	"l"					:	(
 		"gutter"		:	null,
-		"min-width"		:	992px
+		"min-width"		:	62em
 	),
 	"xl"				:	(
 		"gutter"		:	null,
-		"min-width"		:	1200px
+		"min-width"		:	75em
 	)
 );
+
+@each $media, $data in $media-query {
+	$gutter: map-get($data, "gutter");
+	@media (min-width: map-get($data, "min-width")) {
+		@if $gutter {
+			$gutter: $gutter / 2;
+			.column,
+			.columns [class*="col-"] {
+				padding-left: $gutter;
+				padding-right: $gutter;
+			}
+			.columns {
+				margin-left: 0 - $gutter;
+				margin-right: 0 - $gutter;
+			}
+		}
+		[class*="col-#{$media}-"] {
+			display: inline-block;
+		}
+		.col-#{$media}-pull-0,
+		.col-#{$media}-push-0 {
+			left: auto;
+		}
+		@for $i from 1 through grid("columns") {
+			$width: 100% / (grid("columns") / $i);
+			.col-#{$media + "-" + $i} {
+				width: $width;
+			}
+			.col-#{$media + "-pull-" + $i} {
+				left: 0 - $width;
+			}
+			.col-#{$media + "-push-" + $i} {
+				left: $width;
+			}
+		}
+	}
+}

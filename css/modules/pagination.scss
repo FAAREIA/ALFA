@@ -3,6 +3,7 @@
 		li {
 		}
 		button {
+			&:focus,
 			&:hover,
 			&.active {
 			}
@@ -12,8 +13,9 @@
 		li {
 		}
 		button {
-			height: 0px;
-			width: 0px;
+			height: 0rem;
+			width: 0rem;
+			&:focus,
 			&:hover,
 			&.active {
 			}

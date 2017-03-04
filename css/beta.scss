@@ -1,18 +1,18 @@
 /*!
-	ALFA v2.4.0
+	ALFA v2.5.0
 	https://github.com/FAAREIA/ALFA
 	- - - - - - - - - - - - - - - -
-	Compiled with SASS v3.4.21
+	Compiled with SASS v3.4.23
 	CSS file v0.1
 */
 
 @import "core/functions",
-		"core/variables",
 		"core/mixins",
-		"core/grid",
+		"core/reset",
 		"core/colors",
 		"core/fonts",
-		"core/reset",
+		"core/grid",
+		"core/variables",
 		"core/layout",
 		"core/semantic",
 

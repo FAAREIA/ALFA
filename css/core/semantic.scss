@@ -1,21 +1,19 @@
-html {
-	font-size: $html-font-size + px;
+::selection {
+	background: black;
+	color: white;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6,
 dt,
 legend,
-th,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+th {
 	color: c("header");
 	font-family: ff("header");
 	font-weight: 700;
-}
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
 	a {
 		color: inherit;
+		&:focus,
 		&:hover {
 			color: c("link");
 		}
@@ -29,18 +27,8 @@ label, input, select, option, textarea, button,
 td {
 	color: c("text");
 	font-family: ff("text");
-	font-size: rem(14);
-	line-height: rem(24);
-}
-
-h1, h2, h3, h4, h5, h6,
-p, a,
-svg,
-div, ol, ul, li, dt, dd,
-label, input, select, option, textarea, button,
-td,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-	transition: all trsdu("fast");
+	font-size: 1.4rem;
+	line-height: 2.4rem;
 }
 
 header, footer, section, article, aside, nav,
@@ -52,81 +40,74 @@ iframe {
 	line-height: 0;
 }
 
-::selection {
-	background: c("black");
-	color: c("white");
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6,
+p, a,
+svg,
+div, ol, ul, li, dt, dd,
+label, input, select, option, textarea, button,
+th, td {
+	transition: all trsdu("fast");
 }
 
-h1,
-.h1 {
-	font-size: rem(40);
-	line-height: rem(48);
-	+ h2,
-	+ .h2 {
-		margin-top: 0px;
+.h1,
+h1 {
+	font-size: 4rem;
+	line-height: lh(4, 4.8);
+	+ .h2,
+	+ h2 {
+		margin-top: 0rem;
 	}
 	+ p,
 	+ ol,
 	+ ul,
 	+ dl {
-		margin-top: 0px;
+		margin-top: 0rem;
 	}
 }
 
-h2,
-.h2 {
-	font-size: rem(30);
-	line-height: rem(36);
-	+ h3,
-	+ .h3 {
-		margin-top: 0px;
+.h2,
+h2 {
+	font-size: 3rem;
+	line-height: lh(3, 3.6);
+	+ .h3,
+	+ h3 {
+		margin-top: 0rem;
 	}
 	+ p,
 	+ ol,
 	+ ul,
 	+ dl {
-		margin-top: 0px;
+		margin-top: 0rem;
 	}
 	p + &,
 	ol + &,
 	ul + &,
 	dl + & {
-		margin-top: 0px;
+		margin-top: 0rem;
 	}
 }
 
-h3,
-.h3 {
-	font-size: rem(21);
-	line-height: rem(24);
-	+ h4,
-	+ .h4 {
-		margin-top: 0px;
+.h3,
+h3 {
+	font-size: 2.1rem;
+	line-height: lh(2.1, 2.4);
+	+ .h4,
+	+ h4 {
+		margin-top: 0rem;
 	}
 	+ p,
 	+ ol,
 	+ ul,
 	+ dl {
-		margin-top: 0px;
+		margin-top: 0rem;
 	}
 	p + &,
 	ol + &,
 	ul + &,
 	dl + & {
-		margin-top: 0px;
+		margin-top: 0rem;
 	}
-}
-
-h4,
-.h4 {
-}
-
-h5,
-.h5 {
-}
-
-h6,
-.h6 {
 }
 
 p {
@@ -135,12 +116,12 @@ p {
 	+ ul,
 	+ dl,
 	+ form {
-		margin-top: 0px;
+		margin-top: 0rem;
 	}
 	ol + &,
 	ul + &,
 	dl + & {
-		margin-top: 0px;
+		margin-top: 0rem;
 	}
 	small {
 		color: inherit;
@@ -152,6 +133,8 @@ p {
 a {
 	color: c("link");
 	fill: inherit;
+	&:focus,
 	&:hover {
+		color: black;
 	}
 }

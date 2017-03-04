@@ -1,10 +1,8 @@
 form {
-	div {
-		+ div {
-			margin-top: 0px;
-		}
-	}
 	.description {
+	}
+	div {
+		margin-top: 0rem;
 	}
 }
 
@@ -18,6 +16,7 @@ label {
 	display: block;
 }
 
+.form-element,
 input[type="date"],
 input[type="email"],
 input[type="file"],
@@ -28,19 +27,45 @@ input[type="tel"],
 input[type="text"],
 select,
 option,
-textarea,
-.form-element {
-	background: c("white");
-	border: 1px solid c("black");
+textarea {
+	background: white;
+	border: 0rem solid black;
 	box-sizing: border-box;
-	color: c("black");
-	height: 0px;
-	line-height: 0px;
-	padding: 0 0px;
+	color: black;
+	height: 0rem;
+	line-height: 0rem;
+	padding: 0 0rem;
 	width: 100%;
 	&:focus {
-		background: c("black");
-		color: c("white");
+		background: black;
+		color: white;
+	}
+}
+
+.form-element.input-file {
+	overflow: hidden;
+	padding-right: 0rem;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	&::before {
+		background: black;
+		color: white;
+		content: "Browse...";
+		padding: 0 0rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	&::after {
+		color: inherit;
+		content: attr(data-file);
+	}
+	input {
+		cursor: pointer;
+		left: 0;
+		opacity: 0;
+		position: absolute;
 	}
 }
 
@@ -67,35 +92,8 @@ option {
 }
 
 textarea {
-	height: 0px;
+	height: 0rem;
 	resize: vertical;
-}
-
-.form-element.input-file {
-	overflow: hidden;
-	padding-right: 0px;
-	position: relative;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	&::before {
-		background: c("black");
-		color: c("white");
-		content: "Browse...";
-		padding: 0 0px;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	&::after {
-		color: inherit;
-		content: attr(data-file);
-	}
-	input {
-		cursor: pointer;
-		left: 0;
-		opacity: 0;
-		position: absolute;
-	}
 }
 
 
@@ -108,19 +106,31 @@ input::-moz-focus-inner {
 }
 
 select {
-	padding-left: 0px; // This padding-left must be less than the one settled above because browsers add like a phantom "text-indent" value.
+	padding-left: 0rem; // This padding-left must be less than the one settled above because browsers add like a phantom "text-indent" value.
 	padding-right: 0; // IE fix till version 11 at least.
 }
 
 :-ms-input-placeholder {
-	color: c("black");
+	color: black;
+}
+
+:focus:-ms-input-placeholder {
+	color: white;
 }
 
 ::-moz-placeholder {
-	color: c("black");
+	color: black;
 	opacity: 1;
 }
 
+:focus::-moz-placeholder {
+	color: white;
+}
+
 ::-webkit-input-placeholder {
-	color: c("black");
+	color: black;
+}
+
+:focus::-webkit-input-placeholder {
+	color: white;
 }

@@ -6,18 +6,18 @@ nav.tabs {
 		display: inline-block;
 	}
 	button {
-		color: c("black");
+		color: black;
 	}
 }
 
 div.tabs {
 	overflow: hidden;
 	transition-duration: trsdu("normal");
-	.active {
-		animation: trsdu("slow") fade-in;
-		display: block;
-	}
-	section {
+	.tab {
 		display: none;
+		&.active {
+			animation: trsdu("slow") fade-in;
+			display: block;
+		}
 	}
 }

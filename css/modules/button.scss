@@ -1,13 +1,14 @@
 .button {
+	cursor: pointer;
 }
 
 .close {
 	box-sizing: content-box;
-	height: 10px;
+	height: 1rem;
 	overflow: hidden;
-	padding: 7px;
+	padding: 0.7rem;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 10px;
+	width: 1rem;
 }

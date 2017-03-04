@@ -1,17 +1,15 @@
 $border-radius				:	(
-	"small"					:	0px,
-	"normal"				:	0px,
-	"large"					:	0px
+	"small"					:	0rem,
+	"normal"				:	0rem,
+	"large"					:	0rem
 );
-$path						:	(
-	"font"					:	"../fonts/",
-	"image"					:	"../img/"
-);
+
 $transition-duration		:	(
 	"fast"					:	0.2s,
 	"normal"				:	0.6s,
 	"slow"					:	1s
 );
+
 $z-index					:	(
 	"hidden"				:	-1,
 	"visible"				:	1,
