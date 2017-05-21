@@ -16,35 +16,38 @@ label {
 	display: block;
 }
 
-.form-control {
+.form-element,
+input[type="date"],
+input[type="email"],
+input[type="file"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+select,
+option,
+textarea {
 	background: white;
+	border: 0rem solid black;
 	box-sizing: border-box;
 	color: black;
 	height: 0rem;
 	line-height: 0rem;
 	padding: 0 0rem;
 	width: 100%;
-	&:focus,
-	&:focus-within {
+	&:focus {
 		background: black;
 		color: white;
 	}
 }
 
-.form-control.input-file {
-	margin: 0;
+.form-element.input-file {
 	overflow: hidden;
 	padding-right: 0rem;
 	position: relative;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	&:focus-within,
-	&:hover {
-		&::before {
-			background: white;
-			color: black;
-		}
-	}
 	&::before {
 		background: black;
 		color: white;
@@ -53,7 +56,6 @@ label {
 		position: absolute;
 		right: 0;
 		top: 0;
-		transition: all trsdu("fast");
 	}
 	&::after {
 		color: inherit;
@@ -70,11 +72,11 @@ label {
 input,
 select,
 textarea {
-	&[disabled] {
-	}
 	&:invalid {
 	}
 	&:valid {
+	}
+	&[disabled] {
 	}
 }
 
@@ -86,6 +88,7 @@ select {
 }
 
 option {
+	border: 0;
 }
 
 textarea {
