@@ -24,7 +24,7 @@ $(document).ready(function() {
 	// Modal - Close
 	$('.modal').on('click', function(e) {
 		var tag = $(e.target);
-		if (tag.is(this) || tag.is('.close') || tag.is('.close svg')) {
+		if (tag.is(this) || tag.is('.close')) {
 			$(this).fadeOut(240);
 		}
 	});
