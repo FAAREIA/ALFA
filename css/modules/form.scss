@@ -24,57 +24,59 @@ label {
 	line-height: 0rem;
 	padding: 0 0rem;
 	width: 100%;
+	&[disabled] {
+	}
 	&:focus,
 	&:focus-within {
 		background: black;
 		color: white;
-	}
-}
-
-.form-control.input-file {
-	margin: 0;
-	overflow: hidden;
-	padding-right: 0rem;
-	position: relative;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	&:focus-within,
-	&:hover {
-		&::before {
-			background: white;
-			color: black;
+		&::placeholder {
+			color: white;
 		}
-	}
-	&::before {
-		background: black;
-		color: white;
-		content: "Browse...";
-		padding: 0 0rem;
-		position: absolute;
-		right: 0;
-		top: 0;
-		transition: all trsdu("fast");
-	}
-	&::after {
-		color: inherit;
-		content: attr(data-file);
-	}
-	input {
-		cursor: pointer;
-		left: 0;
-		opacity: 0;
-		position: absolute;
-	}
-}
-
-input,
-select,
-textarea {
-	&[disabled] {
 	}
 	&:invalid {
 	}
+	&:placeholder-shown {
+	}
 	&:valid {
+	}
+	&::placeholder {
+		color: black;
+	}
+	&.input-file {
+		margin: 0;
+		overflow: hidden;
+		padding-right: 0rem;
+		position: relative;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:focus-within,
+		&:hover {
+			&::before {
+				background: white;
+				color: black;
+			}
+		}
+		&::before {
+			background: black;
+			color: white;
+			content: "Browse...";
+			padding: 0 0rem;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: all trsdu("fast");
+		}
+		&::after {
+			color: inherit;
+			content: attr(data-file);
+		}
+		input {
+			cursor: pointer;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+		}
 	}
 }
 
@@ -89,9 +91,11 @@ option {
 }
 
 textarea {
-	height: 0rem;
-	line-height: 0rem;
 	resize: vertical;
+	&.form-control {
+		height: 0rem;
+		line-height: 0rem;
+	}
 }
 
 
@@ -103,32 +107,6 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-select {
-	padding-left: 0rem; // This padding-left must be less than the one settled above because browsers add like a phantom "text-indent" value.
-	padding-right: 0; // IE fix till version 11 at least.
-}
-
-:-ms-input-placeholder {
-	color: black;
-}
-
-:focus:-ms-input-placeholder {
-	color: white;
-}
-
 ::-moz-placeholder {
-	color: black;
 	opacity: 1;
-}
-
-:focus::-moz-placeholder {
-	color: white;
-}
-
-::-webkit-input-placeholder {
-	color: black;
-}
-
-:focus::-webkit-input-placeholder {
-	color: white;
 }

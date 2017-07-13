@@ -16,11 +16,12 @@
 		background: white;
 		box-sizing: border-box;
 		left: 50%;
+		max-width: 46.8rem;
 		padding: 0rem 0rem;
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: 30.8rem;
+		width: 100%;
 	}
 	.close {
 		fill: black;
