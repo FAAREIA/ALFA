@@ -24,14 +24,15 @@ label {
 	line-height: 0rem;
 	padding: 0 0rem;
 	width: 100%;
-	&[disabled] {
+	&:disabled {
+		cursor: not-allowed;
 	}
 	&:focus,
 	&:focus-within {
 		background: black;
 		color: white;
 		&::placeholder {
-			color: white;
+			color: red;
 		}
 	}
 	&:invalid {
@@ -41,7 +42,7 @@ label {
 	&:valid {
 	}
 	&::placeholder {
-		color: black;
+		color: red;
 	}
 	&.input-file {
 		margin: 0;
@@ -82,6 +83,8 @@ label {
 
 input[type="checkbox"],
 input[type="radio"] {
+	&:indeterminate {
+	}
 }
 
 select {
@@ -100,12 +103,6 @@ textarea {
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Fixes
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
 
 ::-moz-placeholder {
 	opacity: 1;

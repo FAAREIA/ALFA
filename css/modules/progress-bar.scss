@@ -1,0 +1,24 @@
+progress {
+	background: black;
+	border: 0;
+	color: red;
+	display: block;
+	width: 100%;
+	&:indeterminate {
+	}
+}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Fixes
+
+progress::-webkit-progress-bar {
+	background: black;
+}
+
+progress::-webkit-progress-value {
+	background: red;
+}
+
+progress::-moz-progress-bar {
+	background: red;
+}

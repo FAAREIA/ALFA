@@ -6,15 +6,13 @@
 }
 
 .close {
-	box-sizing: content-box;
-	height: 1rem;
-	overflow: hidden;
 	padding: 0.7rem;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 1rem;
 	svg {
+		height: 1rem;
 		pointer-events: none;
+		width: 1rem;
 	}
 }

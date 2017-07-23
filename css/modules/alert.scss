@@ -8,36 +8,41 @@
 	&.error {
 		background: c("error");
 		border-color: darken(c("error"), 15%);
+		color: white;
+		fill: white;
 	}
 	&.success {
 		background: c("success");
 		border-color: darken(c("success"), 15%);
+		color: white;
+		fill: white;
 	}
 	&.warning {
 		background: c("warning");
 		border-color: darken(c("warning"), 15%);
+		color: c("text");
+		fill: c("text");
 	}
 	&.fixed {
-		box-shadow: 0rem 0rem 0rem black;
+		box-shadow: 0 0 0rem black;
 		left: 50%;
+		max-width: 34.8rem;
 		position: fixed;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: 30.8rem;
+		width: calc(100% - #{grid("gutter") / 2});
 		z-index: z("alert");
 	}
 	.h2, .h3, .h4,
 	h2, h3, h4,
 	p, a, small,
 	li, dt, dd {
-		color: white;
+		color: inherit;
 	}
 	.close {
-		fill: white;
-		fill-opacity: 0.5;
 		&:focus,
 		&:hover {
-			fill: black;
+			filter: invert(100%);
 		}
 	}
 }

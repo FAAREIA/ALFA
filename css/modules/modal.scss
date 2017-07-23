@@ -1,5 +1,5 @@
 .modal {
-	background: rgba(black, 1);
+	background: rgba(black, 0.75);
 	bottom: 0;
 	display: none;
 	left: 0;
@@ -16,18 +16,20 @@
 		background: white;
 		box-sizing: border-box;
 		left: 50%;
+		max-height: calc(100% - #{grid("gutter") / 2});
 		max-width: 46.8rem;
+		overflow: auto;
 		padding: 0rem 0rem;
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: 100%;
+		width: calc(100% - #{grid("gutter") / 2});
 	}
 	.close {
-		fill: black;
+		fill: white;
 		&:focus,
 		&:hover {
-			fill: black;
+			fill: red;
 		}
 	}
 }
