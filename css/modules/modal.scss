@@ -6,12 +6,7 @@
 	position: fixed;
 	right: 0;
 	top: 0;
-	transition: none;
 	z-index: z("modal");
-	&[data-modal-open] {
-		animation: trsdu("slow") fade-in;
-		display: block;
-	}
 	> div {
 		background: white;
 		box-sizing: border-box;

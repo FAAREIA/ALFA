@@ -9,23 +9,19 @@ $(document).ready(function() {
 
 	// Alert - Close
 	$('.alert .close').on('click', function() {
-		$(this).closest('.alert').fadeOut(240);
+		$(this).closest('.alert').removeClass('fade-in');
 	});
 
-	// Modal - Open function
-	function modal_open(modal) {
-		$('.modal[data-modal="' + modal + '"]').fadeIn(480);
-	}
-	// Modal - Open with button
+	// Modal - Open
 	$('button[data-modal]').on('click', function() {
 		var modal = $(this).attr('data-modal');
-		modal_open(modal);
+		$('.modal[data-modal="' + modal + '"]').addClass('fade-in');
 	});
 	// Modal - Close
 	$('.modal').on('click', function(e) {
 		var tag = $(e.target);
 		if (tag.is(this) || tag.is('.close')) {
-			$(this).fadeOut(240);
+			$(this).removeClass('fade-in');
 		}
 	});
 });

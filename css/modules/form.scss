@@ -1,4 +1,11 @@
 form {
+	&:invalid {
+	}
+	&:valid {
+	}
+	.columns {
+		margin-top: 0;
+	}
 	.description {
 	}
 	div {
@@ -13,7 +20,11 @@ legend {
 }
 
 label {
+	cursor: pointer;
 	display: block;
+	&.disabled {
+		cursor: not-allowed;
+	}
 }
 
 .form-control {
@@ -38,6 +49,8 @@ label {
 	&:invalid {
 	}
 	&:placeholder-shown {
+	}
+	&:required {
 	}
 	&:valid {
 	}
@@ -81,8 +94,9 @@ label {
 	}
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input {
+	&:checked {
+	}
 	&:indeterminate {
 	}
 }
@@ -91,6 +105,9 @@ select {
 }
 
 option {
+	padding: inherit;
+	&:checked {
+	}
 }
 
 textarea {

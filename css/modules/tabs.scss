@@ -1,4 +1,4 @@
-nav.tabs {
+.tabs {
 	.active {
 		cursor: auto;
 	}
@@ -10,14 +10,11 @@ nav.tabs {
 	}
 }
 
-div.tabs {
+.tabs-content {
 	overflow: hidden;
 	transition-duration: trsdu("normal");
-	.tab {
-		display: none;
-		&.active {
-			animation: trsdu("slow") fade-in;
-			display: block;
-		}
-	}
+}
+
+.tab-panel {
+	display: none;
 }
