@@ -23,12 +23,11 @@
 	}
 	&::after {
 		background: black;
-		border-radius: bdrs("small");
 		color: white;
 		content: attr(data-tooltip);
 		font-size: 1.1rem;
 		line-height: lh(1.1, 1.4);
-		padding: 0rem 0rem;
+		padding: 0rem;
 		white-space: nowrap;
 	}
 	&.top,
@@ -50,10 +49,10 @@
 	&.top {
 		&::before {
 			border-top-color: black;
-			top: -0.2rem;
+			top: -0.3rem;
 		}
 		&::after {
-			bottom: calc(100% + 0.2rem);
+			bottom: calc(100% + 0.3rem);
 		}
 	}
 	&.right {

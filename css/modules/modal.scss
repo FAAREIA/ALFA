@@ -14,7 +14,7 @@
 		max-height: calc(100% - #{grid("gutter") / 2});
 		max-width: 46.8rem;
 		overflow: auto;
-		padding: 0rem 0rem;
+		padding: 0rem;
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
@@ -22,9 +22,14 @@
 	}
 	.close {
 		fill: white;
+		height: 4.2rem;
+		width: 4.2rem;
 		&:focus,
 		&:hover {
 			fill: red;
+		}
+		svg {
+			height: 1.8rem;
 		}
 	}
 }

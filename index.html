@@ -9,12 +9,13 @@
 	<link rel="icon" href="img/favicon.svg?v=0.1" sizes="any" type="image/svg+xml">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
 	<link rel="stylesheet" href="css/styles.css?v=0.1">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script src="js/libraries/svg4everybody.min.js"></script>
-	<script src="js/constant.js?v=0.1"></script>
-	<script src="js/input-file.js"></script>
-	<script src="js/tabs.js"></script>
-	<script src="js/google-analytics.js"></script>
+	<script defer src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script defer src="js/libraries/svg4everybody.min.js"></script>
+	<script defer src="js/constant.js?v=0.1"></script>
+	<script defer src="js/input-file.js"></script>
+	<script defer src="js/tabs.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=XX-XXXXXXXX-X"></script>
+	<script async src="js/google-analytics.js"></script>
 
 	<meta property="og:type" content="">
 	<meta property="og:url" content="">
@@ -27,7 +28,7 @@
 </head>
 <body>
 	<header id="header">
-		<h1><a href="/"><svg aria-label="Brand name"><use xlink:href="img/constant.svg#logo"/></svg></a></h1>
+		<h1 class="logotype"><a href="/"><img src="img/brand-name.svg" alt="Brand name"></a></h1>
 		<nav>
 			<ul>
 				<li><a href="#">Section</a></li
@@ -41,7 +42,7 @@
 	<main>
 	</main>
 	<footer id="footer">
-		<small>Legals</small>
+		<small class="legals">Legals</small>
 	</footer>
 </body>
 </html>

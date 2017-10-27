@@ -3,6 +3,14 @@
 	color: white;
 }
 
+body,
+input, select, textarea, button {
+	color: c("text");
+	font-family: ff("text");
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6,
 dt,
@@ -20,33 +28,14 @@ th {
 	}
 }
 
-body,
-p, small, address, time, abbr, blockquote, q, cite,
-li, dd,
-label, input, select, textarea, button,
-td {
-	color: c("text");
-	font-family: ff("text");
-	font-size: 1.4rem;
-	line-height: 2.4rem;
-}
-
-header, footer, section, article, aside, nav,
-figure,
-div, ol, ul, dl,
-form, fieldset,
-tr,
-iframe {
-	line-height: 0;
-}
-
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6,
 p, a,
 img, svg,
-div, ol, ul, li, dt, dd,
-label, input, select, option, textarea, button,
-th, td {
+div, ol, ul, li, dl, dt, dd,
+form, label, input, select, option, textarea, button,
+th, td,
+progress {
 	transition: all trsdu("fast");
 }
 
@@ -122,11 +111,6 @@ p {
 	ul + &,
 	dl + & {
 		margin-top: 0rem;
-	}
-	small {
-		color: inherit;
-		font-size: inherit;
-		line-height: inherit;
 	}
 }
 

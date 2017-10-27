@@ -55,13 +55,13 @@ $media-query			:	(
 		}
 		@for $i from 1 through grid("columns") {
 			$width: 100% / (grid("columns") / $i);
-			.col-#{$media + "-" + $i} {
+			.col-#{$media}-#{$i} {
 				width: $width;
 			}
-			.col-#{$media + "-pull-" + $i} {
+			.col-#{$media}-pull-#{$i} {
 				left: 0 - $width;
 			}
-			.col-#{$media + "-push-" + $i} {
+			.col-#{$media}-push-#{$i} {
 				left: $width;
 			}
 		}

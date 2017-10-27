@@ -6,7 +6,7 @@ figure, img,
 div, ol, ul, li, dl, dt, dd,
 form, fieldset, legend, label, input, select, option, textarea, button,
 tr, th, td,
-iframe {
+progress, iframe {
 	border: 0;
 	margin: 0;
 	padding: 0;
@@ -16,6 +16,10 @@ iframe {
 a {
 	outline: 0;
 	text-decoration: none;
+}
+
+small {
+	font-size: inherit;
 }
 
 q::before,
@@ -53,8 +57,4 @@ button {
 
 table {
 	border-collapse: collapse;
-}
-
-main {
-	display: block; // IE 11 fix
 }

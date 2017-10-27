@@ -1,27 +1,40 @@
 .alert {
-	border-style: solid;
-	border-width: 0rem;
 	box-sizing: border-box;
 	display: none;
 	padding: 0rem;
 	position: relative;
 	&.error {
 		background: c("error");
-		border-color: darken(c("error"), 15%);
 		color: white;
 		fill: white;
+		.close {
+			&:focus,
+			&:hover {
+				fill: black;
+			}
+		}
 	}
 	&.success {
 		background: c("success");
-		border-color: darken(c("success"), 15%);
 		color: white;
 		fill: white;
+		.close {
+			&:focus,
+			&:hover {
+				fill: black;
+			}
+		}
 	}
 	&.warning {
 		background: c("warning");
-		border-color: darken(c("warning"), 15%);
 		color: c("text");
 		fill: c("text");
+		.close {
+			&:focus,
+			&:hover {
+				fill: white;
+			}
+		}
 	}
 	&.fixed {
 		box-shadow: 0 0 0rem black;
@@ -34,15 +47,14 @@
 		z-index: z("alert");
 	}
 	.h2, .h3, .h4,
-	h2, h3, h4,
-	p, a, small,
-	li, dt, dd {
+	h2, h3, h4 {
 		color: inherit;
 	}
 	.close {
-		&:focus,
-		&:hover {
-			filter: invert(100%);
+		height: 2.4rem;
+		width: 2.4rem;
+		svg {
+			height: 1rem;
 		}
 	}
 }

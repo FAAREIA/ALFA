@@ -9,18 +9,18 @@
 	}
 	.previous,
 	.next {
-		box-sizing: border-box;
 		fill: black;
 		height: 100%;
+		min-width: 9.6rem;
 		overflow: hidden;
 		padding: 0 0rem;
 		position: absolute;
 		top: 0;
-		width: 7.2rem;
+		width: 20%;
 		z-index: z("content");
 		&:focus,
 		&:hover {
-			fill: black;
+			fill: white;
 			padding: 0 0rem;
 		}
 		svg {

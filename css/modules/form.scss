@@ -84,7 +84,6 @@ label {
 			transition: all trsdu("fast");
 		}
 		&::after {
-			color: inherit;
 			content: attr(data-file);
 		}
 		input {
@@ -97,6 +96,10 @@ label {
 }
 
 input {
+	&[type="checkbox"]:enabled,
+	&[type="radio"]:enabled {
+		cursor: pointer;
+	}
 	&:checked {
 	}
 	&:indeterminate {
@@ -123,6 +126,6 @@ textarea {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Fixes
 
-::-moz-placeholder {
+[placeholder]::-moz-placeholder {
 	opacity: 1;
 }

@@ -32,15 +32,16 @@ $font-face					:	(
 );
 
 @each $family, $data in $font-face {
-	@if map-get($data, "src") {
-		@for $i from 1 through length(map-get($data, "src")) {
+	$src: map-get($data, "src");
+	@if $src {
+		@for $i from 1 through length($src) {
 			@font-face {
 				font-family: nth(ff($family), 1);
 				font-stretch: nth(map-get($data, "stretch"), $i);
 				font-style: nth(map-get($data, "style"), $i);
 				font-variant: nth(map-get($data, "variant"), $i);
 				font-weight: nth(map-get($data, "weight"), $i);
-				src: nth(map-get($data, "src"), $i);
+				src: nth($src, $i);
 				unicode-range: nth(map-get($data, "unicode-range"), $i);
 			}
 		}

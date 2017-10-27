@@ -9,7 +9,7 @@
 	}
 	#header,
 	#footer {
-		display: none;
+		display: none !important;
 	}
 	.h1, .h2, .h3, .h4, .h5, .h6,
 	h1, h2, h3, h4, h5, h6,
@@ -22,7 +22,7 @@
 		&[href^="http"] {
 			text-decoration: underline;
 			&::after {
-				content: " (" attr(href) ")";
+				content: " (" attr(href) ")" !important;
 			}
 		}
 	}

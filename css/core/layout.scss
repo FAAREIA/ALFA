@@ -1,4 +1,4 @@
-html {
+:root {
 	font-size: 62.5%;
 }
 
@@ -16,8 +16,7 @@ main {
 }
 
 .column {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 	max-width: w(grid("columns"), "rem");
 }
 

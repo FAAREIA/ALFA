@@ -6,13 +6,10 @@
 }
 
 .close {
-	padding: 0.7rem;
 	position: absolute;
 	right: 0;
 	top: 0;
 	svg {
-		height: 1rem;
 		pointer-events: none;
-		width: 1rem;
 	}
 }
