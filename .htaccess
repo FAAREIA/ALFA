@@ -1,12 +1,15 @@
 #<IfModule mod_rewrite.c>
 	#RewriteEngine on
 
-	#Redirect non-www to www
-	#RewriteCond %{HTTP_HOST} .
+	#Redirects from non-www to www
+	#RewriteCond %{HTTP_HOST} !^$
 	#RewriteCond %{HTTP_HOST} !^www\. [NC]
-	#RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+	#RewriteCond %{HTTPS}s ^on(s)|
+	#RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-	#Redirect www to non-www
-	#RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-	#RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+	#Redirects from www to non-www
+	#RewriteCond %{HTTP_HOST} ^www\.
+	#RewriteCond %{HTTPS}s ^on(s)|off
+	#RewriteCond http%1://%{HTTP_HOST} ^(https?://)(www\.)?(.+)$
+	#RewriteRule ^ %1%3%{REQUEST_URI} [R=301,L]
 #</IfModule>

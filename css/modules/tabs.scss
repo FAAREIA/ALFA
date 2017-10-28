@@ -7,9 +7,9 @@
 	}
 	button {
 		color: black;
+		&.active,
 		&:focus,
-		&:hover,
-		&.active {
+		&:hover {
 		}
 	}
 }
