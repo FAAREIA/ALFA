@@ -46,7 +46,6 @@
 		width: calc(100% - #{grid("gutter") / 2});
 		z-index: z("alert");
 	}
-	.h2, .h3, .h4,
 	h2, h3, h4 {
 		color: inherit;
 	}

@@ -59,39 +59,40 @@ label {
 	&::placeholder {
 		color: red;
 	}
-	&.input-file {
-		margin: 0;
-		overflow: hidden;
-		padding-right: 0rem;
-		position: relative;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		&:focus-within,
-		&:hover {
-			&::before {
-				background: white;
-				color: black;
-			}
-		}
+}
+
+.form-control.input-file {
+	margin: 0;
+	overflow: hidden;
+	padding-right: 0rem;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	&:focus-within,
+	&:hover {
 		&::before {
-			background: black;
-			color: white;
-			content: "Browse...";
-			padding: 0 0rem;
-			position: absolute;
-			right: 0;
-			top: 0;
-			transition: all trsdu("fast");
+			background: white;
+			color: black;
 		}
-		&::after {
-			content: attr(data-file);
-		}
-		input {
-			cursor: pointer;
-			left: 0;
-			opacity: 0;
-			position: absolute;
-		}
+	}
+	&::before {
+		background: black;
+		color: white;
+		content: "Browse...";
+		padding: 0 0rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition-duration: trsdu("fast");
+	}
+	&::after {
+		content: attr(data-file);
+	}
+	input {
+		cursor: pointer;
+		left: 0;
+		opacity: 0;
+		position: absolute;
 	}
 }
 

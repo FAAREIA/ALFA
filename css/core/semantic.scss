@@ -11,7 +11,6 @@ input, select, textarea, button {
 	line-height: 2.4rem;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6,
 dt,
 legend,
@@ -28,15 +27,14 @@ th {
 	}
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6,
-p, a,
+p, a, span,
 img, svg,
 div, ol, ul, li, dl, dt, dd,
 form, label, input, select, option, textarea, button,
 th, td,
 progress {
-	transition: all trsdu("fast");
+	transition-duration: trsdu("fast");
 }
 
 .h1,
