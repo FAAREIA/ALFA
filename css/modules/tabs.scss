@@ -5,12 +5,13 @@
 	li {
 		display: inline-block;
 	}
-	button {
-		color: black;
-		&.active,
-		&:focus,
-		&:hover {
-		}
+}
+
+.tab-button {
+	color: black;
+	&.active,
+	&:focus,
+	&:hover {
 	}
 }
 

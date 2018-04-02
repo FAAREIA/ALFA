@@ -3,10 +3,13 @@
 }
 
 body {
+	hyphens: auto;
 }
 
 #header {
-	position: relative;
+	.column {
+		position: relative;
+	}
 }
 
 main {
