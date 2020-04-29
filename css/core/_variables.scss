@@ -1,0 +1,84 @@
+$animation-duration: (
+	"short": null,
+	"median": null,
+	"long": null
+);
+
+$border-radius: (
+	"small": null,
+	"medium": null,
+	"large": null
+);
+
+$color: (
+	"primary": null,
+	"secondary": null,
+	"tertiary": null,
+
+	"header": null,
+	"link": null,
+	"text": null,
+
+	"error": null,
+	"success": null,
+	"warning": null
+);
+
+$easing-function: ();
+
+$font-face: (
+	"alternative": (
+		"font-display": null,
+		"font-stretch": null,
+		"font-style": null,
+		"font-variant": null,
+		"font-variation-settings": null,
+		"font-weight": null,
+		"src": null,
+		"unicode-range": null
+	),
+	"header": (
+		"font-display": null,
+		"font-stretch": null,
+		"font-style": null,
+		"font-variant": null,
+		"font-variation-settings": null,
+		"font-weight": null,
+		"src": null,
+		"unicode-range": null
+	),
+	"text": (
+		"font-display": null,
+		"font-stretch": null,
+		"font-style": null,
+		"font-variant": null,
+		"font-variation-settings": null,
+		"font-weight": null,
+		"src": null,
+		"unicode-range": null
+	)
+);
+
+$font-family: (
+	"alternative": null,
+	"header": null,
+	"text": null
+);
+
+$grid: (
+	"baseline": null,
+	"column-gap": null,
+	"column-width": null,
+	"columns": null,
+	"row-gap": null
+);
+
+$z-index: (
+	"content": 300,
+	"dropdown": 400,
+	"sticky": 500,
+	"fixed": 600,
+	"modal": 700,
+	"advertising": 800,
+	"alert": 900
+);
