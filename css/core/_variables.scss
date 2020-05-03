@@ -1,27 +1,31 @@
 $animation-duration: (
-	"short": null,
+	"long": null,
 	"median": null,
-	"long": null
+	"short": null
 );
 
 $border-radius: (
-	"small": null,
+	"large": null,
 	"medium": null,
-	"large": null
+	"small": null
 );
 
-$color: (
-	"primary": null,
-	"secondary": null,
-	"tertiary": null,
+$color-scheme: (
+	"dark": (),
+	"light": (),
+	"no-preference": (
+		"primary": null,
+		"secondary": null,
+		"tertiary": null,
 
-	"header": null,
-	"link": null,
-	"text": null,
+		"header": null,
+		"link": null,
+		"text": null,
 
-	"error": null,
-	"success": null,
-	"warning": null
+		"error": null,
+		"success": null,
+		"warning": null
+	)
 );
 
 $easing-function: ();
@@ -69,7 +73,11 @@ $grid: (
 	"baseline": null,
 	"column-gap": null,
 	"column-width": null,
-	"columns": null,
+	"columns": (
+		"desktop": null,
+		"mobile": null,
+		"tablet": null
+	),
 	"row-gap": null
 );
 
