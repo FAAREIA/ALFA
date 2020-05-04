@@ -1,12 +1,32 @@
 @use "sass:map";
 
+@function fz-relative-length($font-size, $lengths, $unit: null) {
+	@if type-of($font-size) != number or not unitless($font-size) {
+		@error "$font-size must be a unitless number.";
+	}
+
+	$values: ();
+
+	@each $length in $lengths {
+		@if type-of($length) != number or not unitless($length) {
+			@error "$lengths must be one or multiple unitless numbers.";
+		}
+		$values: append($values, if($length == 0, 0, ($length / $font-size) + $unit));
+	}
+
+	@return $values;
+}
+
 @function get-map-key($map, $keys) {
+	@if type-of($map) != map {
+		@error "$map is not a map.";
+	}
+
 	@each $key in $keys {
-		@if map.has-key($map, $key) {
-			$map: map.get($map, $key);
-		} @else {
+		@if not map.has-key($map, $key) {
 			@error "Nonexistent map key.";
 		}
+		$map: map.get($map, $key);
 	}
 
 	@return $map;
