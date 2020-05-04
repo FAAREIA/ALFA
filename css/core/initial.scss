@@ -1,0 +1,69 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+@include declare-font-face;
+
+:root {
+	@include declare-custom-property("animdur", $animation-duration);
+	@include declare-custom-property("bdrs", $border-radius);
+	@include declare-custom-property("c", $color-scheme, "no-preference");
+	@include declare-custom-property("ff", $font-family);
+	@include declare-custom-property("g", $grid, "baseline");
+	@include declare-custom-property("g", $grid, "column-gap");
+	@include declare-custom-property("g", $grid, "column-width");
+	@include declare-custom-property("g", $grid, "row-gap");
+	@include declare-custom-property("z", $z-index);
+	font-size: 62.5%;
+}
+
+::selection {
+	background: null;
+	color: null;
+}
+
+a {
+	color: var(--c-link);
+	&:focus,
+	&:hover {
+	}
+}
+
+body {
+	color: var(--c-text);
+	font: null/var(--g-baseline) var(--ff-text);
+}
+
+.h1,
+.h2,
+.h3,
+dt,
+h1,
+h2,
+h3,
+legend,
+th {
+	color: var(--c-header);
+	font-family: var(--ff-header);
+	font-weight: null;
+	a {
+		color: inherit;
+	}
+}
+
+.h1,
+h1 {
+	font-size: null;
+	line-height: null;
+}
+
+.h2,
+h2 {
+	font-size: null;
+	line-height: null;
+}
+
+.h3,
+h3 {
+	font-size: null;
+	line-height: null;
+}

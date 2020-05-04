@@ -1,0 +1,38 @@
+@use "functions" as *;
+@use "sass:map";
+@use "variables" as *;
+
+@mixin declare-custom-property($prefix, $map, $keys: null, $key-name-index: 1) {
+	$key-value: if($keys, get-map-key($map, $keys), $map);
+	$prefix: --#{$prefix}-;
+
+	@if type-of($key-value) == map {
+		@each $key, $value in $key-value {
+			@if $value {
+				#{$prefix + $key}: $value;
+			}
+		}
+	} @else if $key-value {
+		#{$prefix + nth($keys, $key-name-index)}: $key-value;
+	}
+}
+
+@mixin declare-font-face {
+	@each $family, $properties in $font-face {
+		$src: map.get($properties, "src");
+
+		@if $src {
+			$font-family: nth(map.get($font-family, $family), 1);
+			$length: length(map.get($properties, "font-weight"));
+
+			@for $i from 1 through $length {
+				@font-face {
+					@each $property, $value in $properties {
+						#{$property}: if($length == 1, $value, nth($value, $i));
+						font-family: if($property == "font-display", $font-family, null);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+@use "sass:map";
+
+@function get-map-key($map, $keys) {
+	@each $key in $keys {
+		@if map.has-key($map, $key) {
+			$map: map.get($map, $key);
+		} @else {
+			@error "Nonexistent map key.";
+		}
+	}
+
+	@return $map;
+}
