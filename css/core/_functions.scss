@@ -1,6 +1,21 @@
 @use "sass:map";
 
-@function fz-relative-length($font-size, $lengths, $unit: null) {
+@function get-map-key($map, $keys) {
+	@if type-of($map) != map {
+		@error "$map is not a map.";
+	}
+
+	@each $key in $keys {
+		@if not map.has-key($map, $key) {
+			@error "Nonexistent map key.";
+		}
+		$map: map.get($map, $key);
+	}
+
+	@return $map;
+}
+
+@function set-fz-relative-length($font-size, $lengths, $unit: null) {
 	@if type-of($font-size) != number or not unitless($font-size) {
 		@error "$font-size must be a unitless number.";
 	}
@@ -15,19 +30,4 @@
 	}
 
 	@return $values;
-}
-
-@function get-map-key($map, $keys) {
-	@if type-of($map) != map {
-		@error "$map is not a map.";
-	}
-
-	@each $key in $keys {
-		@if not map.has-key($map, $key) {
-			@error "Nonexistent map key.";
-		}
-		$map: map.get($map, $key);
-	}
-
-	@return $map;
 }

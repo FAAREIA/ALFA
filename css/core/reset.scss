@@ -40,16 +40,21 @@ textarea {
 	font-size: inherit;
 }
 
-button:not(:disabled),
-input[type="reset"]:not(:disabled),
-input[type="submit"]:not(:disabled) {
-	cursor: pointer;
+button[type="button"] {
+	background: none;
 }
 
+button[type="button"],
 fieldset,
 hr,
 iframe {
 	border: 0;
+}
+
+button:not(:disabled),
+input[type="reset"]:not(:disabled),
+input[type="submit"]:not(:disabled) {
+	cursor: pointer;
 }
 
 fieldset,

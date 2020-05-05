@@ -34,23 +34,6 @@ body {
 }
 
 .h1,
-.h2,
-.h3,
-dt,
-h1,
-h2,
-h3,
-legend,
-th {
-	color: var(--c-header);
-	font-family: var(--ff-header);
-	font-weight: null;
-	a {
-		color: inherit;
-	}
-}
-
-.h1,
 h1 {
 	font-size: null;
 	line-height: null;
@@ -66,4 +49,23 @@ h2 {
 h3 {
 	font-size: null;
 	line-height: null;
+}
+
+.heading,
+dt,
+h1,
+h2,
+h3,
+legend,
+th {
+	color: var(--c-header);
+	font-family: var(--ff-header);
+	font-weight: null;
+	a {
+		color: inherit;
+	}
+}
+
+img {
+	display: block;
 }
