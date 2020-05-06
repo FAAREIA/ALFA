@@ -15,7 +15,7 @@
 	@return $map;
 }
 
-@function set-fz-relative-length($font-size, $lengths, $unit: null) {
+@function set-font-size-relative-length($font-size, $lengths, $unit: null) {
 	@if type-of($font-size) != number or not unitless($font-size) {
 		@error "$font-size must be a unitless number.";
 	}
