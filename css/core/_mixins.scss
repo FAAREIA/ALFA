@@ -4,7 +4,7 @@
 
 @mixin declare-custom-property($prefix, $map, $keys: null, $key-name-index: 1) {
 	$key-value: if($keys, get-map-key($map, $keys), $map);
-	$prefix: --#{$prefix}-;
+	$prefix: --#{$prefix}--;
 
 	@if type-of($key-value) == map {
 		@each $key, $value in $key-value {

@@ -15,9 +15,9 @@
 	@return $map;
 }
 
-@function set-font-size-relative-length($font-size, $lengths, $unit: null) {
-	@if type-of($font-size) != number or not unitless($font-size) {
-		@error "$font-size must be a unitless number.";
+@function set-font-relative-length($font-value, $lengths, $unit: null) {
+	@if type-of($font-value) != number or not unitless($font-value) {
+		@error "$font-value must be a unitless number.";
 	}
 
 	$values: ();
@@ -26,7 +26,7 @@
 		@if type-of($length) != number or not unitless($length) {
 			@error "$lengths must be one or multiple unitless numbers.";
 		}
-		$values: append($values, if($length == 0, 0, ($length / $font-size) + $unit));
+		$values: append($values, if($length == 0, 0, ($length / $font-value) + $unit));
 	}
 
 	@return $values;
