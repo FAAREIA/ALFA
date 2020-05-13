@@ -1,16 +1,17 @@
 .button {
-	cursor: pointer;
-	&:focus,
-	&:hover {
+	&.focus,
+	&.hover {
 	}
 }
 
+// Ver como lo centro el svg, si con flex, o con el padding del padre...
+// FALTA TODO
 .close {
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
+	height: null;
+	width: null;
+	&.focus,
+	&.hover {
+	}
 	svg {
-		pointer-events: none;
 	}
 }

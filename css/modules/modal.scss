@@ -1,35 +1,17 @@
 .modal {
-	background: rgba(black, 0.75);
-	bottom: 0;
-	display: none;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: z("modal");
-	> div {
-		background: white;
-		box-sizing: border-box;
-		left: 50%;
-		max-height: calc(100% - #{grid("gutter") / 2});
-		max-width: 46.8rem;
-		overflow: auto;
-		padding: 0rem;
-		position: absolute;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		width: calc(100% - #{grid("gutter") / 2});
+	background: null;
+	border: 0;
+	box-sizing: border-box;
+	color: null;
+	max-height: calc(100vh - var(--gd-column-gap) * 2);
+	max-width: calc(100vw - var(--gd-column-gap) * 2);
+	overflow: auto;
+	padding: null;
+	width: null;
+	z-index: var(--z-modal);
+	&::backdrop {
+		background: null;
 	}
-	.close {
-		fill: white;
-		height: 4.2rem;
-		width: 4.2rem;
-		&:focus,
-		&:hover {
-			fill: red;
-		}
-		svg {
-			width: 1.8rem;
-		}
+	&[open] {
 	}
 }
