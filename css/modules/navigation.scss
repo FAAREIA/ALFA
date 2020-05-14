@@ -6,10 +6,10 @@
 	padding: null;
 	&:focus,
 	&:hover {
-		--i-burger--t-span--bg: null;
+		--i-burger--bg: null;
 	}
 	span {
-		background: var(--i-burger--t-span--bg, null);
+		background: var(--i-burger--bg, null);
 		height: null;
 		overflow: hidden;
 		white-space: nowrap;
