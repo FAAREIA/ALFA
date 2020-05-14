@@ -1,0 +1,35 @@
+* {
+	background: none !important;
+	box-shadow: none !important;
+	color: black !important;
+	text-shadow: none !important;
+}
+
+.heading,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+th {
+	break-inside: avoid;
+}
+
+a[href^="http"]::after {
+	content: " (" attr(href) ")";
+}
+
+abbr[title]::after {
+	content: " (" attr(title) ")";
+}
+
+blockquote[cite]::after {
+	content: " (" attr(cite) ")";
+}
+
+q[cite]::after {
+	content: close-quote " (" attr(cite) ")";
+}
