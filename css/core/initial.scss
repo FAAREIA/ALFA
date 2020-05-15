@@ -39,7 +39,7 @@ img {
 .grid {
 	display: grid;
 	gap: var(--gd-row-gap) var(--gd-column-gap);
-	grid-template-columns: repeat(var(--gd-columns), minmax(var(--gd-column-width)));
+	grid-template-columns: repeat(var(--gd-columns, get-map-key($grid, "columns" "mobile")), minmax(var(--gd-column-width)));
 }
 
 .h1,
