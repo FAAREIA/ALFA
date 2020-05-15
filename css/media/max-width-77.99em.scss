@@ -1,12 +1,6 @@
 @use "../core/mixins" as *;
 @use "../core/variables" as *;
 
-@media (max-width: 47.99em) {
-	:root {
-		@include declare-custom-property("gd", $grid, "columns" "mobile");
-	}
-}
-
 @media (min-width: 48em) {
 	:root {
 		@include declare-custom-property("gd", $grid, "columns" "tablet");

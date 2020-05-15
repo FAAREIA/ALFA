@@ -5,19 +5,6 @@
 	text-shadow: none !important;
 }
 
-.heading,
-dt,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-legend,
-th {
-	break-inside: avoid;
-}
-
 a[href^="http"]::after {
 	content: " (" attr(href) ")";
 }
@@ -28,6 +15,18 @@ abbr[title]::after {
 
 blockquote[cite]::after {
 	content: " (" attr(cite) ")";
+}
+
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+th {
+	break-inside: avoid;
 }
 
 q[cite]::after {
