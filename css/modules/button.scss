@@ -1,17 +1,19 @@
 .button {
-	&.focus,
-	&.hover {
+	background: null;
+	height: null;
+	line-height: null;
+	padding: null;
+	&:focus,
+	&:hover {
 	}
 }
 
-// Ver como lo centro el svg, si con flex, o con el padding del padre...
-// FALTA TODO
-.close {
+.close-button {
+	fill: null;
 	height: null;
+	padding: null;
 	width: null;
-	&.focus,
-	&.hover {
-	}
-	svg {
+	&:focus,
+	&:hover {
 	}
 }

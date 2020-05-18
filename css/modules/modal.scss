@@ -1,17 +1,38 @@
 .modal {
 	background: null;
 	border: 0;
-	box-sizing: border-box;
-	color: null;
-	max-height: calc(100vh - var(--gd-column-gap) * 2);
-	max-width: calc(100vw - var(--gd-column-gap) * 2);
-	overflow: auto;
-	padding: null;
-	width: null;
-	z-index: var(--z-modal);
-	&::backdrop {
-		background: null;
+	display: none;
+	grid-template:	"..... ....... close" null
+					"..... content ....." minmax(null, 1fr)
+					"..... ....... ....." null
+					/ null minmax(null, 1fr) null;
+	height: 100%;
+	left: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: var(--z--modal);
+	&.close {
+		animation: null;
 	}
 	&[open] {
+		display: grid;
+	}
+	.close-button {
+		grid-area: close;
+		justify-self: end;
+		z-index: 1;
+	}
+	.content {
+		background: null;
+		box-sizing: border-box;
+		grid-area: content;
+		max-height: 100%;
+		max-width: null;
+		overflow: auto;
+		padding: null;
+		place-self: center;
+		width: 100%;
 	}
 }
