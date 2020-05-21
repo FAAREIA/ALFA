@@ -1,0 +1,36 @@
+/*!
+	ALFA v3.0.0
+	https://github.com/FAAREIA/ALFA
+	- - - - - - - - - - - - - - - -
+	Compiled with Dart Sass v1.26.5
+	Compilation ID: #{unique-id()}
+	- - - - - - - - - - - - - - - -
+	CSS v0.0.0
+*/
+
+@use "core/reset";
+@use "core/initial";
+
+@use "modules/advertising.scss";
+@use "modules/alert.scss";
+@use "modules/animation.scss";
+@use "modules/article.scss";
+@use "modules/button.scss";
+@use "modules/cross-browser.scss";
+@use "modules/focus.scss";
+@use "modules/form.scss";
+@use "modules/list.scss";
+@use "modules/logotype.scss";
+@use "modules/modal.scss";
+@use "modules/navigation.scss";
+@use "modules/pagination.scss";
+@use "modules/slideshow.scss";
+@use "modules/social-media.scss";
+@use "modules/svg.scss";
+@use "modules/table.scss";
+@use "modules/tabs.scss";
+@use "modules/tooltip.scss";
+@use "modules/utilities.scss";
+@use "modules/video.scss";
+
+@use "pages/.scss";
