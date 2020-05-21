@@ -22,15 +22,15 @@
 }
 
 a {
-	color: var(--c-link);
+	color: var(--c--link);
 	&:focus,
 	&:hover {
 	}
 }
 
 body {
-	color: var(--c-text);
-	font: null/var(--gd-baseline) var(--ff-text);
+	color: var(--c--text);
+	font: null/var(--gd--baseline) var(--ff--text);
 }
 
 img {
@@ -39,8 +39,8 @@ img {
 
 .grid {
 	display: grid;
-	gap: var(--gd-row-gap) var(--gd-column-gap);
-	grid-template-columns: repeat(var(--gd-columns, get-map-key($grid, "columns" "mobile")), minmax(var(--gd-column-width)));
+	gap: var(--gd--row-gap) var(--gd--column-gap);
+	grid-template-columns: repeat(var(--gd--columns, get-map-key($grid, "columns" "mobile")), minmax(var(--gd--column-width)));
 }
 
 .h1,
@@ -68,8 +68,8 @@ h2,
 h3,
 legend,
 th {
-	color: var(--c-header);
-	font-family: var(--ff-header);
+	color: var(--c--header);
+	font-family: var(--ff--header);
 	font-weight: null;
 	a {
 		color: inherit;
