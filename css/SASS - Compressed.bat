@@ -1,1 +1,0 @@
-sass --style compressed --sourcemap=none beta.scss:styles.css
