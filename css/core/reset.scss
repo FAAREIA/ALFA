@@ -27,16 +27,16 @@ ul {
 button,
 input,
 select,
+small,
 textarea {
-	font-family: inherit;
+	font-size: inherit;
 }
 
 button,
 input,
 select,
-small,
 textarea {
-	font-size: inherit;
+	font-family: inherit;
 }
 
 button[type="button"] {
