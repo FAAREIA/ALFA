@@ -1,7 +1,7 @@
 #burger {
+	block-size: null;
 	display: flex;
 	flex-flow: column;
-	height: null;
 	justify-content: space-between;
 	padding: null;
 	&:focus,
@@ -10,10 +10,10 @@
 	}
 	span {
 		background: var(--i-burger--bg, null);
-		height: null;
+		block-size: null;
+		inline-size: null;
 		overflow: hidden;
 		white-space: nowrap;
-		width: null;
 	}
 }
 

@@ -1,6 +1,6 @@
 .button {
 	background: null;
-	height: null;
+	block-size: null;
 	line-height: null;
 	padding: null;
 	&:focus,
@@ -9,10 +9,10 @@
 }
 
 .close-button {
+	block-size: null;
 	fill: null;
-	height: null;
+	inline-size: null;
 	padding: null;
-	width: null;
 	&:focus,
 	&:hover {
 	}

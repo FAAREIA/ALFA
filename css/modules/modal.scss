@@ -1,17 +1,17 @@
 .modal {
 	background: null;
+	block-size: 100%;
 	border: 0;
 	display: none;
 	grid-template:	"..... ....... close" null
 					"..... content ....." minmax(null, 1fr)
 					"..... ....... ....." null
 					/ null minmax(null, 1fr) null;
-	height: 100%;
+	inline-size: 100%;
 	left: 0;
 	padding: 0;
 	position: fixed;
 	top: 0;
-	width: 100%;
 	z-index: var(--z--modal);
 	&.close {
 		animation: null;
@@ -28,11 +28,11 @@
 		background: null;
 		box-sizing: border-box;
 		grid-area: content;
-		max-height: 100%;
-		max-width: null;
+		inline-size: 100%;
+		max-block-size: 100%;
+		max-inline-size: null;
 		overflow: auto;
 		padding: null;
 		place-self: center;
-		width: 100%;
 	}
 }

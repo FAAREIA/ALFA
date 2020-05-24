@@ -33,6 +33,7 @@
 		color: null;
 		content: attr(data-tooltip);
 		font-size: null;
+		inline-size: max-content;
 		left: var(--tooltip--l, auto);
 		line-height: null;
 		opacity: var(--tooltip--op, 0);
@@ -43,7 +44,6 @@
 		top: var(--tooltip--t, auto);
 		transform: var(--tooltip--trf, translateY(-50%));
 		transition: null;
-		width: max-content;
 		z-index: 1;
 	}
 }

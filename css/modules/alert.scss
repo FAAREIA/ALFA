@@ -3,9 +3,9 @@
 	border: 0;
 	color: var(--alert--c, null);
 	display: none;
+	inline-size: var(--alert--isz, auto);
 	padding: null;
 	position: var(--alert--pos, relative);
-	width: var(--alert--w, auto);
 	&.close {
 		animation: null;
 	}
@@ -14,12 +14,12 @@
 		--alert--c: null;
 	}
 	&.fixed {
+		--alert--isz: null;
 		--alert--pos: fixed;
-		--alert--w: null;
 		box-sizing: border-box;
 		left: 50%;
-		max-height: calc(100% - var(--gd--column-gap) * 2);
-		max-width: calc(100% - var(--gd--column-gap) * 2);
+		max-block-size: calc(100% - var(--gd--column-gap) * 2);
+		max-inline-size: calc(100% - var(--gd--column-gap) * 2);
 		overflow: auto;
 		top: 50%;
 		transform: translate(-50%, -50%);
