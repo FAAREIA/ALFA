@@ -3,6 +3,8 @@
 	block-size: null;
 	line-height: null;
 	padding: null;
+	&:disabled {
+	}
 	&:focus,
 	&:hover {
 	}
@@ -15,5 +17,8 @@
 	padding: null;
 	&:focus,
 	&:hover {
+	}
+	svg {
+		pointer-events: none;
 	}
 }

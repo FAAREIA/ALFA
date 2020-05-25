@@ -10,7 +10,7 @@
 		animation: null;
 	}
 	&.error {
-		--alert--bg: null;
+		--alert--bg: var(--c--error);
 		--alert--c: null;
 	}
 	&.fixed {
@@ -26,11 +26,11 @@
 		z-index: var(--z--alert);
 	}
 	&.success {
-		--alert--bg: null;
+		--alert--bg: var(--c--success);
 		--alert--c: null;
 	}
 	&.warning {
-		--alert--bg: null;
+		--alert--bg: var(--c--warning);
 		--alert--c: null;
 	}
 	&[open] {

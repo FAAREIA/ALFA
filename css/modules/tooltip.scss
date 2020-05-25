@@ -2,7 +2,7 @@
 	cursor: null;
 	position: relative;
 	&.bottom {
-		--tooltip--t: 100%;
+		--tooltip--t: calc(100% + null);
 	}
 	&.bottom,
 	&.top {
@@ -10,17 +10,17 @@
 		--tooltip--trf: translateX(-50%);
 	}
 	&.left {
-		--tooltip--r: 100%;
+		--tooltip--r: calc(100% + null);
 	}
 	&.left,
 	&.right {
 		--tooltip--t: 50%;
 	}
 	&.right {
-		--tooltip--l: 100%;
+		--tooltip--l: calc(100% + null);
 	}
 	&.top {
-		--tooltip--b: 100%;
+		--tooltip--b: calc(100% + null);
 	}
 	&:focus,
 	&:hover {
