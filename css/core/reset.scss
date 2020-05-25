@@ -24,6 +24,17 @@ ul {
 	margin: 0;
 }
 
+button {
+	background: none;
+}
+
+button,
+fieldset,
+hr,
+iframe {
+	border: 0;
+}
+
 button,
 input,
 select,
@@ -39,20 +50,9 @@ textarea {
 	font-family: inherit;
 }
 
-button[type="button"] {
-	background: none;
-}
-
-button[type="button"],
-fieldset,
-hr,
-iframe {
-	border: 0;
-}
-
-button:not(:disabled),
-input[type="reset"]:not(:disabled),
-input[type="submit"]:not(:disabled) {
+button:enabled,
+input[type="reset"]:enabled,
+input[type="submit"]:enabled {
 	cursor: pointer;
 }
 
