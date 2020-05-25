@@ -1,0 +1,6 @@
+@use "../core/mixins" as *;
+@use "../core/variables" as *;
+
+:root {
+	@include declare-custom-property("c", $color-scheme, "dark");
+}

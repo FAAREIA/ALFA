@@ -1,0 +1,8 @@
+@use "../core/mixins" as *;
+@use "../core/variables" as *;
+
+@media (min-width: 48em) {
+	:root {
+		@include declare-custom-property("gd", $grid, "columns" "tablet");
+	}
+}
