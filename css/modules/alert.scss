@@ -1,59 +1,47 @@
 .alert {
-	box-sizing: border-box;
+	background: var(--alert--bg);
+	border: 0;
+	color: var(--alert--c, null);
 	display: none;
-	padding: 0rem;
-	position: relative;
+	inline-size: var(--alert--isz, auto);
+	padding: null;
+	position: var(--alert--pos, relative);
+	&.close {
+		animation: null;
+	}
 	&.error {
-		background: c("error");
-		color: white;
-		fill: white;
-		.close {
-			&:focus,
-			&:hover {
-				fill: black;
-			}
-		}
-	}
-	&.success {
-		background: c("success");
-		color: white;
-		fill: white;
-		.close {
-			&:focus,
-			&:hover {
-				fill: black;
-			}
-		}
-	}
-	&.warning {
-		background: c("warning");
-		color: c("text");
-		fill: c("text");
-		.close {
-			&:focus,
-			&:hover {
-				fill: white;
-			}
-		}
+		--alert--bg: var(--c--error);
+		--alert--c: null;
 	}
 	&.fixed {
-		box-shadow: 0 0 0rem black;
+		--alert--isz: null;
+		--alert--pos: fixed;
+		box-sizing: border-box;
 		left: 50%;
-		max-width: 34.8rem;
-		position: fixed;
+		max-block-size: calc(100% - var(--gd--column-gap) * 2);
+		max-inline-size: calc(100% - var(--gd--column-gap) * 2);
+		overflow: auto;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		width: calc(100% - #{grid("gutter") / 2});
-		z-index: z("alert");
+		z-index: var(--z--alert);
 	}
-	h2, h3, h4 {
+	&.success {
+		--alert--bg: var(--c--success);
+		--alert--c: null;
+	}
+	&.warning {
+		--alert--bg: var(--c--warning);
+		--alert--c: null;
+	}
+	&[open] {
+		display: block;
+	}
+	.close-button {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.heading {
 		color: inherit;
-	}
-	.close {
-		height: 2.4rem;
-		width: 2.4rem;
-		svg {
-			width: 1rem;
-		}
 	}
 }

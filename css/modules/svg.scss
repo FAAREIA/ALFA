@@ -1,11 +1,4 @@
 svg {
-	display: block;
-	height: 100%;
-	margin: 0 auto;
-	overflow: visible;
-	width: 100%;
-	&.inline {
-		display: inline-block;
-		vertical-align: middle;
-	}
+	max-block-size: 100%;
+	max-inline-size: 100%;
 }

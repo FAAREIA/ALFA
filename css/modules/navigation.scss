@@ -1,89 +1,24 @@
-#header nav {
-	li {
+#burger {
+	block-size: null;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding: null;
+	&:focus,
+	&:hover {
+		--i-burger--bg: null;
 	}
-	a,
-	button {
-		&:focus,
-		&:hover {
-		}
-	}
-}
-
-.nav-responsive {
-	height: 0rem;
-	overflow: hidden;
-	padding: 0 grid("gutter") / 4;
-	position: absolute;
-	right: 0;
-	top: 0;
 	span {
-		background: black;
-		display: block;
-		height: 0.4rem;
-		position: relative;
-		text-indent: 200%;
-		white-space: nowrap;
-		width: 2.4rem;
-		&::before,
-		&::after {
-			background: inherit;
-			content: "";
-			height: 100%;
-			left: 0;
-			position: absolute;
-			width: 100%;
-		}
-		&::before {
-			top: -200%;
-		}
-		&::after {
-			bottom: -200%;
-		}
-	}
-}
-
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Media queries
-
-@media (max-width: 47.9375em) {
-	#header nav {
+		background: var(--i-burger--bg, null);
+		block-size: null;
+		inline-size: null;
 		overflow: hidden;
-		&.open {
-			li {
-				height: 0rem;
-				opacity: 1;
-			}
-			a,
-			button {
-				line-height: 0rem;
-			}
-		}
-		li,
-		a,
-		button {
-			transition-duration: trsdu("normal");
-		}
-		li {
-			height: 0;
-			opacity: 0;
-		}
-		a,
-		button {
-			line-height: 0rem;
-		}
+		white-space: nowrap;
 	}
 }
 
-@media (min-width: 48em) {
-	#header nav {
-		li {
-			display: inline-block;
-			+ li {
-				margin-left: 0rem;
-			}
-		}
-	}
-	.nav-responsive {
-		display: none;
+#nav {
+	ol {
+		display: flex;
 	}
 }

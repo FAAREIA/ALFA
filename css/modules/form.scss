@@ -1,49 +1,27 @@
-form {
-	&:invalid {
-	}
-	&:valid {
-	}
-	.description {
-	}
-	.form-group {
-		margin-top: 0rem;
-	}
-}
-
-fieldset {
-}
-
-legend {
-}
-
-label {
-	cursor: pointer;
-	display: block;
-	&.disabled {
-		cursor: not-allowed;
-	}
-}
-
 .form-control {
-	background: white;
+	background: var(--form-control--bg, null);
+	block-size: var(--form-control--bsz, null);
+	border: null;
 	box-sizing: border-box;
-	color: black;
-	height: 0rem;
-	line-height: 0rem;
-	padding: 0 0rem;
-	width: 100%;
+	color: var(--form-control--c, null);
+	line-height: var(--form-control--lh, null);
+	padding: var(--form-control--p, null);
 	&:disabled {
-		cursor: not-allowed;
+		--form-control_placeholder--c: "inherit";
+		--form-control--bg: null;
+		--form-control--c: null;
 	}
 	&:focus,
 	&:focus-within {
-		background: black;
-		color: white;
-		&::placeholder {
-			color: red;
-		}
+		--form-control_placeholder--c: null;
+		--form-control--bg: null;
+		--form-control--c: null;
 	}
-	&:invalid {
+	&:in-range,
+	&:valid {
+	}
+	&:invalid,
+	&:out-of-range {
 	}
 	&:optional {
 	}
@@ -51,78 +29,73 @@ label {
 	}
 	&:required {
 	}
-	&:valid {
-	}
 	&::placeholder {
-		color: red;
+		color: var(--form-control_placeholder--c, null);
 	}
 }
 
-.form-control.input-file {
-	overflow: hidden;
-	padding-right: 0rem;
+.form-control.file {
+	--form-control--p: 0;
+	display: flex;
 	position: relative;
-	text-overflow: ellipsis;
 	white-space: nowrap;
-	&:focus-within,
-	&:hover {
-		&::before {
-			background: white;
-			color: black;
-		}
+	&[data-file=""] {
+		--form-control_file_before--cnt: data-placeholder;
 	}
-	&::before {
-		background: black;
-		color: white;
-		content: "Browse...";
-		padding: 0 0rem;
-		position: absolute;
-		right: 0;
-		top: 0;
-		transition-duration: trsdu("fast");
+	&:focus-within {
+		--form-control_file_after--bg: null;
+		--form-control_file_after--c: null;
 	}
 	&::after {
-		content: attr(data-file);
+		background: var(--form-control_file_after--bg, null);
+		color: var(--form-control_file_after--c, null);
+		content: "Browse...";
+		padding: null;
 	}
-	input {
+	&::before {
+		content: attr(var(--form-control_file_before--cnt, data-file));
+		flex-grow: 1;
+		overflow: hidden;
+		padding: null;
+		text-overflow: ellipsis;
+	}
+	.form-control {
 		cursor: pointer;
-		left: 0;
+		inline-size: 100%;
 		opacity: 0;
 		position: absolute;
 	}
 }
 
-input {
-	&[type="checkbox"]:enabled,
-	&[type="radio"]:enabled {
-		cursor: pointer;
-	}
+.form-description {
+}
+
+.form-group {
+	display: flex;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
 	&:checked {
+	}
+	&:enabled {
+		cursor: pointer;
 	}
 	&:indeterminate {
 	}
 }
 
-select {
+label[for] {
+	cursor: pointer;
 }
 
-option {
-	padding: inherit;
-	&:checked {
-	}
+select[multiple] {
+	--form-control--bsz: null;
 }
 
 textarea {
+	--form-control--bsz: null;
+	--form-control--lh: "inherit";
+	--form-control--p: null;
 	resize: vertical;
-	&.form-control {
-		height: 0rem;
-		line-height: 0rem;
-	}
-}
-
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Fixes
-
-[placeholder]::-moz-placeholder {
-	opacity: 1;
 }

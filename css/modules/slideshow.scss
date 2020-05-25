@@ -1,40 +1,8 @@
 .slideshow {
-	position: relative;
-	.slides {
-		li {
-			transition: none;
-		}
-	}
-	.pagination {
-	}
-	.previous,
-	.next {
-		fill: black;
-		height: 100%;
-		min-width: 9.6rem;
-		overflow: hidden;
-		padding: 0 0rem;
-		position: absolute;
-		top: 0;
-		width: 20%;
-		z-index: z("content");
-		&:focus,
-		&:hover {
-			fill: white;
-			padding: 0 0rem;
-		}
-		svg {
-			margin: 0;
-			width: 0rem;
-		}
-	}
-	.previous {
-		left: 0;
-	}
-	.next {
-		right: 0;
-		svg {
-			margin-left: auto;
-		}
+	display: grid;
+	grid-template: null;
+	.images {
+		block-size: null;
+		grid-area: null;
 	}
 }

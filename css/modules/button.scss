@@ -1,15 +1,23 @@
 .button {
-	cursor: pointer;
+	background: null;
+	block-size: null;
+	line-height: null;
+	padding: null;
+	&:disabled {
+	}
 	&:focus,
 	&:hover {
 	}
 }
 
-.close {
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
+.close-button {
+	block-size: null;
+	fill: null;
+	inline-size: null;
+	padding: null;
+	&:focus,
+	&:hover {
+	}
 	svg {
 		pointer-events: none;
 	}
