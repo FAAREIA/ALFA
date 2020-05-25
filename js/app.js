@@ -1,13 +1,17 @@
 const closeModal = template => {
-	const close = template.querySelector('.close-button');
 	const modal = template.querySelector('dialog');
-
-	close.addEventListener('click', () => modal.classList.add('close'));
 
 	modal.addEventListener('animationend', e => {
 		if (e.animationName !== ) return;
 		modal.classList.remove('close');
 		modal.removeAttribute('open');
+	});
+
+	modal.addEventListener('click', e => {
+		const target = e.target.className;
+
+		if (target !== 'close-button' && target !== 'modal') return;
+		modal.classList.add('close');
 	});
 }
 
