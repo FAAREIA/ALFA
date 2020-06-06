@@ -4,9 +4,9 @@
 	border: 0;
 	display: none;
 	grid-template:	"..... ....... close" null
-					"..... content ....." minmax(null, 1fr)
+					"..... content ....." null
 					"..... ....... ....." null
-					/ null minmax(null, 1fr) null;
+					/ null null null;
 	inline-size: 100%;
 	left: 0;
 	padding: 0;
