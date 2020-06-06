@@ -8,12 +8,13 @@
 	@include declare-custom-property("animdur", $animation-duration);
 	@include declare-custom-property("bdrs", $border-radius);
 	@include declare-custom-property("ff", $font-family);
+	@include declare-custom-property("fz", $font-size);
 	@include declare-custom-property("gd", $grid, "baseline");
 	@include declare-custom-property("gd", $grid, "column-gap");
 	@include declare-custom-property("gd", $grid, "column-width");
 	@include declare-custom-property("gd", $grid, "row-gap");
 	@include declare-custom-property("z", $z-index);
-	font-size: 62.5%;
+	font-size: var(--fz--root);
 }
 
 ::selection {
@@ -30,7 +31,7 @@ a {
 
 body {
 	color: var(--c--text);
-	font: null/var(--gd--baseline) var(--ff--text);
+	font: var(--fz--text)/var(--gd--baseline) var(--ff--text);
 }
 
 img {
@@ -40,24 +41,24 @@ img {
 .grid {
 	display: grid;
 	gap: var(--gd--row-gap) var(--gd--column-gap);
-	grid-template-columns: repeat(var(--gd--columns, get-map-key($grid, "columns" "mobile")), minmax(var(--gd--column-width)));
+	grid-template-columns: repeat(var(--gd--columns, get-map-key($grid, "columns" "mobile")), var(--gd--column-width));
 }
 
 .h1,
 h1 {
-	font-size: null;
+	font-size: var(--fz--h1);
 	line-height: null;
 }
 
 .h2,
 h2 {
-	font-size: null;
+	font-size: var(--fz--h2);
 	line-height: null;
 }
 
 .h3,
 h3 {
-	font-size: null;
+	font-size: var(--fz--h3);
 	line-height: null;
 }
 
