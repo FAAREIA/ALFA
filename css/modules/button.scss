@@ -1,6 +1,7 @@
 .button {
 	background: null;
 	block-size: null;
+	box-sizing: border-box;
 	line-height: null;
 	padding: null;
 	&:disabled {
